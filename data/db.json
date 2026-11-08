@@ -1,0 +1,3086 @@
+{
+  "investigations": [
+    {
+      "id": "inv_flood_bridge_01",
+      "title": "Viral Alert: Grand River Metro Bridge Collapse Rumor",
+      "originalInput": "BREAKING EMERGENCY! The Grand River Bridge has just collapsed due to raging flash floods! Thousands trapped on East Bank! NDMA not disclosing the truth. Evacuate immediately via North route!",
+      "inputType": "text",
+      "submittedAt": "2026-11-08T07:15:00Z",
+      "mainClaim": "The Grand River Bridge collapsed due to flash floods and emergency authorities are concealing it",
+      "claimType": "emergency",
+      "location": "Central Valley Basin, Grand River Crossing",
+      "entities": [
+        "Grand River Bridge",
+        "NDMA",
+        "East Bank"
+      ],
+      "timeSensitivity": "critical",
+      "potentialRisk": "Severe traffic gridlock, panic evacuation into flood channels, resource diversion from real rescue operations.",
+      "extractedClaims": [
+        {
+          "id": "ec_1",
+          "statement": "Grand River Bridge has collapsed",
+          "claimType": "infrastructure",
+          "location": "Central Valley",
+          "entities": [
+            "Grand River Bridge"
+          ],
+          "timeSensitivity": "critical",
+          "requiresVerification": true,
+          "potentialRisk": "public panic and route choking"
+        },
+        {
+          "id": "ec_2",
+          "statement": "NDMA is actively concealing disaster damage",
+          "claimType": "emergency",
+          "location": "Central Valley",
+          "entities": [
+            "NDMA"
+          ],
+          "timeSensitivity": "high",
+          "requiresVerification": true,
+          "potentialRisk": "erosion of institutional trust"
+        }
+      ],
+      "verdict": "FALSE",
+      "confidenceScore": 0.94,
+      "explanation": "Both the National Disaster Management Authority (NDMA) and State Department of Transportation have verified through physical structural inspection and real-time strain sensors that the Grand River Crossing is intact and operational. Furthermore, reverse image analysis by fact-checkers confirmed that the video attached to viral messaging is recycled footage from a 2019 overseas cyclone.",
+      "contextAnalysis": "During high-stress flood events, fear-driven rumor amplification peaks within the first 90 minutes. Citizens forward unverified warnings out of an altruistic desire to protect loved ones, unaware of the video's false origin.",
+      "evidenceLimitations": [
+        "Secondary rural bridge approaches are subject to water overtopping, though the main crossing is safe.",
+        "Social media platforms experienced a 400% reshare spike before official debunk statements were issued."
+      ],
+      "suggestedSteps": [
+        "Issue real-time broadcast via Emergency SMS and trusted community radio.",
+        "Deploy live webcam feed of the bridge to provide visual refutation.",
+        "Partner with trusted neighborhood coordinators to dispel localized evacuation panic."
+      ],
+      "evidenceSources": [
+        {
+          "id": "ev_1",
+          "name": "National Disaster Management Authority (NDMA)",
+          "url": "https://ndma.gov/bulletins/monsoon-flood-alert-092",
+          "sourceType": "official_agency",
+          "publicationDate": "2026-11-08T06:30:00Z",
+          "retrievalDate": "2026-11-08T07:15:00Z",
+          "excerpt": "NDMA Situation Report #14: River levels at Central Valley Basin remain within elevated amber alert thresholds. Major infrastructure, including the Grand River Crossing and Metro Suspension Bridge, has been inspected by structural corps engineers and is deemed structurally sound and open for authorized vehicle traffic.",
+          "stance": "contradicting",
+          "reliabilityRating": "high",
+          "limitations": "Covers designated federal highways and primary municipal bridges; local unpaved culverts remain under monitoring."
+        },
+        {
+          "id": "ev_2",
+          "name": "State Department of Transportation Inspection Bureau",
+          "url": "https://dot.state.gov/traffic/bridge-monitoring-live",
+          "sourceType": "official_agency",
+          "publicationDate": "2026-11-08T07:00:00Z",
+          "retrievalDate": "2026-11-08T07:18:00Z",
+          "excerpt": "Live sensor telemetry on Grand River Crossing reports normal strain gauge tolerances. Rumors circulating on messaging networks claiming catastrophic deck failure are false.",
+          "stance": "contradicting",
+          "reliabilityRating": "high",
+          "limitations": "Direct telemetry available on 18 core arterial bridges."
+        },
+        {
+          "id": "ev_3",
+          "name": "Global FactCheck Alliance - Emergency Dispatch",
+          "url": "https://factcheck.org/emergency/debunk-valley-bridge-collapse",
+          "sourceType": "fact_checker",
+          "publicationDate": "2026-11-08T07:10:00Z",
+          "retrievalDate": "2026-11-08T07:22:00Z",
+          "excerpt": "Viral video showing collapsed steel spans with floodwaters is misattributed footage from a 2019 cyclone in another continent, recycled with a local audio voiceover.",
+          "stance": "contradicting",
+          "reliabilityRating": "high",
+          "limitations": "Reverse image verification matches 2019 archive video footage."
+        }
+      ]
+    }
+  ],
+  "simulations": [
+    {
+      "id": "sim_1794153193643",
+      "config": {
+        "id": "test_sim",
+        "name": "Test Flood",
+        "crisisType": "flood",
+        "description": "Test",
+        "misinformationMessage": "Bridge collapsed",
+        "populationSize": 60,
+        "numGroups": 3,
+        "socialDensity": 0.08,
+        "initialMisinfoPrevalence": 0.05,
+        "mediaInfluence": 0.2,
+        "officialSpeed": 3,
+        "seed": 42,
+        "interventions": []
+      },
+      "status": "idle",
+      "currentStep": 0,
+      "maxSteps": 15,
+      "agents": [
+        {
+          "id": "agent_1",
+          "name": "Fact Checker #1",
+          "archetype": "fact_checker",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.42049315869808196,
+          "skepticism": 0.98,
+          "sharingTendency": 0.33496277974918487,
+          "infoLiteracy": 0.98,
+          "connections": [
+            "agent_2",
+            "agent_6",
+            "agent_11",
+            "agent_22",
+            "agent_56",
+            "agent_57"
+          ],
+          "x": 249,
+          "y": 504
+        },
+        {
+          "id": "agent_2",
+          "name": "Resident #2",
+          "archetype": "ordinary_citizen",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.49998474684543914,
+          "skepticism": 0.5264117666985839,
+          "sharingTendency": 0.4991475129965693,
+          "infoLiteracy": 0.521050227014348,
+          "connections": [
+            "agent_1",
+            "agent_7",
+            "agent_11",
+            "agent_33",
+            "agent_41",
+            "agent_45",
+            "agent_51",
+            "agent_58"
+          ],
+          "x": 248,
+          "y": 525
+        },
+        {
+          "id": "agent_3",
+          "name": "Resident #3",
+          "archetype": "ordinary_citizen",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.4507685903925449,
+          "skepticism": 0.4441563847474754,
+          "sharingTendency": 0.5174674851819873,
+          "infoLiteracy": 0.48268138994462795,
+          "connections": [
+            "agent_11",
+            "agent_34",
+            "agent_53"
+          ],
+          "x": 334,
+          "y": 538
+        },
+        {
+          "id": "agent_4",
+          "name": "Critical Inquirer #4",
+          "archetype": "skeptical_citizen",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.23713780143298208,
+          "skepticism": 0.9067094586323946,
+          "sharingTendency": 0.2560671212617308,
+          "infoLiteracy": 0.6790685413987376,
+          "connections": [
+            "agent_13",
+            "agent_17",
+            "agent_21",
+            "agent_22",
+            "agent_24",
+            "agent_34",
+            "agent_35",
+            "agent_50"
+          ],
+          "x": 670,
+          "y": 284
+        },
+        {
+          "id": "agent_5",
+          "name": "Emergency Responder #5",
+          "archetype": "emergency_responder",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.5638923491351306,
+          "skepticism": 0.7399791457224637,
+          "sharingTendency": 0.40748784272000194,
+          "infoLiteracy": 0.8327089101774618,
+          "connections": [
+            "agent_9",
+            "agent_10",
+            "agent_30",
+            "agent_34",
+            "agent_36",
+            "agent_38",
+            "agent_39",
+            "agent_40",
+            "agent_48",
+            "agent_52",
+            "agent_54"
+          ],
+          "x": 220,
+          "y": 40
+        },
+        {
+          "id": "agent_6",
+          "name": "Critical Inquirer #6",
+          "archetype": "skeptical_citizen",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.2419020977336913,
+          "skepticism": 0.810725926887244,
+          "sharingTendency": 0.297724274545908,
+          "infoLiteracy": 0.8038066378911026,
+          "connections": [
+            "agent_1",
+            "agent_8",
+            "agent_11",
+            "agent_12",
+            "agent_18",
+            "agent_33",
+            "agent_34",
+            "agent_40",
+            "agent_44",
+            "agent_48",
+            "agent_53",
+            "agent_58"
+          ],
+          "x": 286,
+          "y": 579
+        },
+        {
+          "id": "agent_7",
+          "name": "Critical Inquirer #7",
+          "archetype": "skeptical_citizen",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.21493892595171926,
+          "skepticism": 0.8819719586987048,
+          "sharingTendency": 0.2861537864431739,
+          "infoLiteracy": 0.7789632174884901,
+          "connections": [
+            "agent_2",
+            "agent_17",
+            "agent_22",
+            "agent_29",
+            "agent_31",
+            "agent_34",
+            "agent_43",
+            "agent_55"
+          ],
+          "x": 747,
+          "y": 354
+        },
+        {
+          "id": "agent_8",
+          "name": "Resident #8",
+          "archetype": "ordinary_citizen",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.6384589101653546,
+          "skepticism": 0.37745968154631554,
+          "sharingTendency": 0.3721886331215501,
+          "infoLiteracy": 0.477376435790211,
+          "connections": [
+            "agent_6",
+            "agent_19",
+            "agent_26",
+            "agent_27",
+            "agent_28",
+            "agent_32",
+            "agent_56"
+          ],
+          "x": 231,
+          "y": 530
+        },
+        {
+          "id": "agent_9",
+          "name": "Fact Checker #9",
+          "archetype": "fact_checker",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.2655164811294526,
+          "skepticism": 0.98,
+          "sharingTendency": 0.48697354639880364,
+          "infoLiteracy": 0.9467377207544632,
+          "connections": [
+            "agent_5",
+            "agent_16",
+            "agent_19",
+            "agent_23",
+            "agent_39",
+            "agent_40"
+          ],
+          "x": 303,
+          "y": 145
+        },
+        {
+          "id": "agent_10",
+          "name": "Emergency Responder #10",
+          "archetype": "emergency_responder",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.5241185146849602,
+          "skepticism": 0.8491277270019054,
+          "sharingTendency": 0.512560042925179,
+          "infoLiteracy": 0.9624180247192271,
+          "connections": [
+            "agent_5",
+            "agent_16",
+            "agent_23",
+            "agent_36",
+            "agent_38",
+            "agent_39",
+            "agent_40",
+            "agent_51",
+            "agent_59"
+          ],
+          "x": 228,
+          "y": 52
+        },
+        {
+          "id": "agent_11",
+          "name": "Community Leader #11",
+          "archetype": "community_leader",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.614591559022665,
+          "skepticism": 0.6458827981725335,
+          "sharingTendency": 0.459041735669598,
+          "infoLiteracy": 0.7924644104670734,
+          "connections": [
+            "agent_1",
+            "agent_2",
+            "agent_3",
+            "agent_6",
+            "agent_12",
+            "agent_22",
+            "agent_26",
+            "agent_27",
+            "agent_32",
+            "agent_44",
+            "agent_54",
+            "agent_56"
+          ],
+          "x": 239,
+          "y": 438
+        },
+        {
+          "id": "agent_12",
+          "name": "Resident #12",
+          "archetype": "ordinary_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.5363782939966768,
+          "skepticism": 0.45904262652620675,
+          "sharingTendency": 0.4091859030537307,
+          "infoLiteracy": 0.4901316159404815,
+          "connections": [
+            "agent_6",
+            "agent_11",
+            "agent_23",
+            "agent_30",
+            "agent_36",
+            "agent_39",
+            "agent_40",
+            "agent_41",
+            "agent_52",
+            "agent_54"
+          ],
+          "x": 240,
+          "y": 145
+        },
+        {
+          "id": "agent_13",
+          "name": "Resident #13",
+          "archetype": "ordinary_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.4687282694038004,
+          "skepticism": 0.4450783597305417,
+          "sharingTendency": 0.5143901614937931,
+          "infoLiteracy": 0.4944968922878616,
+          "connections": [
+            "agent_4",
+            "agent_14",
+            "agent_15",
+            "agent_30",
+            "agent_36",
+            "agent_38",
+            "agent_39",
+            "agent_45",
+            "agent_54"
+          ],
+          "x": 317,
+          "y": 171
+        },
+        {
+          "id": "agent_14",
+          "name": "Resident #14",
+          "archetype": "ordinary_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.4946364260278643,
+          "skepticism": 0.4325723845046014,
+          "sharingTendency": 0.3826874931808561,
+          "infoLiteracy": 0.5731999584008008,
+          "connections": [
+            "agent_13",
+            "agent_15",
+            "agent_18",
+            "agent_19",
+            "agent_30",
+            "agent_38",
+            "agent_39",
+            "agent_40",
+            "agent_46",
+            "agent_51",
+            "agent_59"
+          ],
+          "x": 280,
+          "y": 110
+        },
+        {
+          "id": "agent_15",
+          "name": "Public Official #15",
+          "archetype": "official",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.5152755927760154,
+          "skepticism": 0.7584854615852237,
+          "sharingTendency": 0.3785891574341804,
+          "infoLiteracy": 0.8247089203516953,
+          "connections": [
+            "agent_13",
+            "agent_14",
+            "agent_16",
+            "agent_38",
+            "agent_39",
+            "agent_40",
+            "agent_47",
+            "agent_51",
+            "agent_52"
+          ],
+          "x": 205,
+          "y": 144
+        },
+        {
+          "id": "agent_16",
+          "name": "High-Trust Citizen #16",
+          "archetype": "high_trust_sharer",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.8770527637563645,
+          "skepticism": 0.22518467116169633,
+          "sharingTendency": 0.881632895860821,
+          "infoLiteracy": 0.30634831716306504,
+          "connections": [
+            "agent_9",
+            "agent_10",
+            "agent_15",
+            "agent_36",
+            "agent_37",
+            "agent_39",
+            "agent_40",
+            "agent_41",
+            "agent_45",
+            "agent_51",
+            "agent_54"
+          ],
+          "x": 204,
+          "y": 79
+        },
+        {
+          "id": "agent_17",
+          "name": "Critical Inquirer #17",
+          "archetype": "skeptical_citizen",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.3411103578284383,
+          "skepticism": 0.8916739926207811,
+          "sharingTendency": 0.20829842323437334,
+          "infoLiteracy": 0.7163227026234381,
+          "connections": [
+            "agent_4",
+            "agent_7",
+            "agent_22",
+            "agent_28",
+            "agent_34",
+            "agent_35",
+            "agent_43"
+          ],
+          "x": 696,
+          "y": 307
+        },
+        {
+          "id": "agent_18",
+          "name": "Critical Inquirer #18",
+          "archetype": "skeptical_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.31447033304721117,
+          "skepticism": 0.9477128537371755,
+          "sharingTendency": 0.18277323246002197,
+          "infoLiteracy": 0.7006251097773202,
+          "connections": [
+            "agent_6",
+            "agent_14",
+            "agent_24",
+            "agent_38",
+            "agent_39",
+            "agent_40",
+            "agent_41",
+            "agent_46",
+            "agent_51"
+          ],
+          "x": 254,
+          "y": 134
+        },
+        {
+          "id": "agent_19",
+          "name": "Local Journalist #19",
+          "archetype": "local_journalist",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.3836711102630943,
+          "skepticism": 0.837227358063683,
+          "sharingTendency": 0.5797027169261127,
+          "infoLiteracy": 0.8754181199823506,
+          "connections": [
+            "agent_8",
+            "agent_9",
+            "agent_14",
+            "agent_26",
+            "agent_27",
+            "agent_44",
+            "agent_56",
+            "agent_60"
+          ],
+          "x": 224,
+          "y": 612
+        },
+        {
+          "id": "agent_20",
+          "name": "Emergency Responder #20",
+          "archetype": "emergency_responder",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.6092724149581045,
+          "skepticism": 0.7678595887962729,
+          "sharingTendency": 0.4470814017113298,
+          "infoLiteracy": 0.8738048412837088,
+          "connections": [
+            "agent_26",
+            "agent_33",
+            "agent_53"
+          ],
+          "x": 256,
+          "y": 555
+        },
+        {
+          "id": "agent_21",
+          "name": "Resident #21",
+          "archetype": "ordinary_citizen",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.48386091873981063,
+          "skepticism": 0.4889972392469645,
+          "sharingTendency": 0.4128448871895671,
+          "infoLiteracy": 0.4937368247658015,
+          "connections": [
+            "agent_4",
+            "agent_22",
+            "agent_28",
+            "agent_34",
+            "agent_40",
+            "agent_46",
+            "agent_50"
+          ],
+          "x": 693,
+          "y": 309
+        },
+        {
+          "id": "agent_22",
+          "name": "Social Influencer #22",
+          "archetype": "influencer",
+          "group": "District A",
+          "state": "SHARING_MISINFO",
+          "trustLevel": 0.6963068196550011,
+          "skepticism": 0.27598601547069845,
+          "sharingTendency": 0.9424099692609161,
+          "infoLiteracy": 0.5618941925116815,
+          "connections": [
+            "agent_1",
+            "agent_4",
+            "agent_7",
+            "agent_11",
+            "agent_17",
+            "agent_21",
+            "agent_24",
+            "agent_25",
+            "agent_28",
+            "agent_34",
+            "agent_43",
+            "agent_50",
+            "agent_55"
+          ],
+          "x": 577,
+          "y": 333,
+          "exposureStep": 0,
+          "reactionQuote": "Did you see this alert? Sharing right away!"
+        },
+        {
+          "id": "agent_23",
+          "name": "High-Trust Citizen #23",
+          "archetype": "high_trust_sharer",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.8551350440829992,
+          "skepticism": 0.21807507337071003,
+          "sharingTendency": 0.8789012030232698,
+          "infoLiteracy": 0.34251541923731565,
+          "connections": [
+            "agent_9",
+            "agent_10",
+            "agent_12",
+            "agent_24",
+            "agent_30",
+            "agent_39",
+            "agent_40",
+            "agent_48"
+          ],
+          "x": 258,
+          "y": 64
+        },
+        {
+          "id": "agent_24",
+          "name": "Resident #24",
+          "archetype": "ordinary_citizen",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.5279287222307176,
+          "skepticism": 0.45913242544047533,
+          "sharingTendency": 0.5468982082791627,
+          "infoLiteracy": 0.5487999023287558,
+          "connections": [
+            "agent_4",
+            "agent_18",
+            "agent_22",
+            "agent_23",
+            "agent_27",
+            "agent_34",
+            "agent_43",
+            "agent_50",
+            "agent_55"
+          ],
+          "x": 712,
+          "y": 221
+        },
+        {
+          "id": "agent_25",
+          "name": "Resident #25",
+          "archetype": "ordinary_citizen",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.4638680618256331,
+          "skepticism": 0.383860270306468,
+          "sharingTendency": 0.45130852051079273,
+          "infoLiteracy": 0.5764985304209405,
+          "connections": [
+            "agent_22",
+            "agent_31",
+            "agent_34",
+            "agent_36",
+            "agent_55"
+          ],
+          "x": 744,
+          "y": 296
+        },
+        {
+          "id": "agent_26",
+          "name": "Resident #26",
+          "archetype": "ordinary_citizen",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.6173952111508698,
+          "skepticism": 0.5205927467439324,
+          "sharingTendency": 0.46987784234806895,
+          "infoLiteracy": 0.5276623423560522,
+          "connections": [
+            "agent_8",
+            "agent_11",
+            "agent_19",
+            "agent_20",
+            "agent_27",
+            "agent_32",
+            "agent_49",
+            "agent_50",
+            "agent_60"
+          ],
+          "x": 305,
+          "y": 491
+        },
+        {
+          "id": "agent_27",
+          "name": "Resident #27",
+          "archetype": "ordinary_citizen",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.6375063498970122,
+          "skepticism": 0.47518818713724614,
+          "sharingTendency": 0.41586627028882506,
+          "infoLiteracy": 0.6017004779307172,
+          "connections": [
+            "agent_8",
+            "agent_11",
+            "agent_19",
+            "agent_24",
+            "agent_26",
+            "agent_32",
+            "agent_44",
+            "agent_48",
+            "agent_53",
+            "agent_56",
+            "agent_57",
+            "agent_58"
+          ],
+          "x": 259,
+          "y": 538
+        },
+        {
+          "id": "agent_28",
+          "name": "High-Trust Citizen #28",
+          "archetype": "high_trust_sharer",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.8795313212554902,
+          "skepticism": 0.1952728874515742,
+          "sharingTendency": 0.89118837765418,
+          "infoLiteracy": 0.4069197071832604,
+          "connections": [
+            "agent_8",
+            "agent_17",
+            "agent_21",
+            "agent_22",
+            "agent_35",
+            "agent_55"
+          ],
+          "x": 646,
+          "y": 251
+        },
+        {
+          "id": "agent_29",
+          "name": "High-Trust Citizen #29",
+          "archetype": "high_trust_sharer",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.7778277255129069,
+          "skepticism": 0.05953515684232115,
+          "sharingTendency": 0.7581969182007016,
+          "infoLiteracy": 0.34114763191901143,
+          "connections": [
+            "agent_7",
+            "agent_50"
+          ],
+          "x": 647,
+          "y": 239
+        },
+        {
+          "id": "agent_30",
+          "name": "Resident #30",
+          "archetype": "ordinary_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.4891850216314197,
+          "skepticism": 0.48327137785963714,
+          "sharingTendency": 0.45356095577590166,
+          "infoLiteracy": 0.541531565762125,
+          "connections": [
+            "agent_5",
+            "agent_12",
+            "agent_13",
+            "agent_14",
+            "agent_23",
+            "agent_38",
+            "agent_39",
+            "agent_40",
+            "agent_42",
+            "agent_52"
+          ],
+          "x": 220,
+          "y": 88
+        },
+        {
+          "id": "agent_31",
+          "name": "Local Journalist #31",
+          "archetype": "local_journalist",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.36151905660517514,
+          "skepticism": 0.729529094323516,
+          "sharingTendency": 0.600919445278123,
+          "infoLiteracy": 0.8651099844253622,
+          "connections": [
+            "agent_7",
+            "agent_25",
+            "agent_39",
+            "agent_50"
+          ],
+          "x": 604,
+          "y": 283
+        },
+        {
+          "id": "agent_32",
+          "name": "Public Official #32",
+          "archetype": "official",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.47696507074870176,
+          "skepticism": 0.6007529146969318,
+          "sharingTendency": 0.3296354668680579,
+          "infoLiteracy": 0.9464860347053036,
+          "connections": [
+            "agent_8",
+            "agent_11",
+            "agent_26",
+            "agent_27",
+            "agent_44",
+            "agent_49",
+            "agent_54"
+          ],
+          "x": 275,
+          "y": 520
+        },
+        {
+          "id": "agent_33",
+          "name": "Health Professional #33",
+          "archetype": "health_professional",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.4197582539636642,
+          "skepticism": 0.8643341722898186,
+          "sharingTendency": 0.3613469862379134,
+          "infoLiteracy": 0.9305917500401847,
+          "connections": [
+            "agent_2",
+            "agent_6",
+            "agent_20",
+            "agent_36",
+            "agent_44",
+            "agent_48",
+            "agent_56"
+          ],
+          "x": 263,
+          "y": 501
+        },
+        {
+          "id": "agent_34",
+          "name": "Social Influencer #34",
+          "archetype": "influencer",
+          "group": "District A",
+          "state": "SHARING_MISINFO",
+          "trustLevel": 0.7932785414624959,
+          "skepticism": 0.35002173758111893,
+          "sharingTendency": 0.9322401054203511,
+          "infoLiteracy": 0.5444575141533278,
+          "connections": [
+            "agent_3",
+            "agent_4",
+            "agent_5",
+            "agent_6",
+            "agent_7",
+            "agent_17",
+            "agent_21",
+            "agent_22",
+            "agent_24",
+            "agent_25",
+            "agent_35",
+            "agent_44",
+            "agent_46",
+            "agent_47",
+            "agent_54",
+            "agent_55",
+            "agent_59"
+          ],
+          "x": 680,
+          "y": 243,
+          "exposureStep": 0,
+          "reactionQuote": "Did you see this alert? Sharing right away!"
+        },
+        {
+          "id": "agent_35",
+          "name": "Emergency Responder #35",
+          "archetype": "emergency_responder",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.5156172288116068,
+          "skepticism": 0.6691752183251083,
+          "sharingTendency": 0.4119148375466466,
+          "infoLiteracy": 0.8644162643118761,
+          "connections": [
+            "agent_4",
+            "agent_17",
+            "agent_28",
+            "agent_34",
+            "agent_45",
+            "agent_47",
+            "agent_50"
+          ],
+          "x": 624,
+          "y": 236
+        },
+        {
+          "id": "agent_36",
+          "name": "Social Influencer #36",
+          "archetype": "influencer",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.604426573542878,
+          "skepticism": 0.27935275817289945,
+          "sharingTendency": 0.8675674363505096,
+          "infoLiteracy": 0.4676196443499066,
+          "connections": [
+            "agent_5",
+            "agent_10",
+            "agent_12",
+            "agent_13",
+            "agent_16",
+            "agent_25",
+            "agent_33",
+            "agent_37",
+            "agent_38",
+            "agent_39",
+            "agent_40",
+            "agent_43",
+            "agent_46",
+            "agent_52",
+            "agent_54",
+            "agent_58"
+          ],
+          "x": 181,
+          "y": 54
+        },
+        {
+          "id": "agent_37",
+          "name": "Critical Inquirer #37",
+          "archetype": "skeptical_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.39041956844739617,
+          "skepticism": 0.8032506854273379,
+          "sharingTendency": 0.25367205794900655,
+          "infoLiteracy": 0.8040023679030128,
+          "connections": [
+            "agent_16",
+            "agent_36",
+            "agent_38",
+            "agent_39"
+          ],
+          "x": 229,
+          "y": -20
+        },
+        {
+          "id": "agent_38",
+          "name": "Social Influencer #38",
+          "archetype": "influencer",
+          "group": "District C",
+          "state": "SHARING_MISINFO",
+          "trustLevel": 0.6623951845802366,
+          "skepticism": 0.29880570573732257,
+          "sharingTendency": 0.9500501155387611,
+          "infoLiteracy": 0.507459242339246,
+          "connections": [
+            "agent_5",
+            "agent_10",
+            "agent_13",
+            "agent_14",
+            "agent_15",
+            "agent_18",
+            "agent_30",
+            "agent_36",
+            "agent_37",
+            "agent_40",
+            "agent_42",
+            "agent_45",
+            "agent_47",
+            "agent_52",
+            "agent_54",
+            "agent_55",
+            "agent_58"
+          ],
+          "x": 199,
+          "y": 50,
+          "exposureStep": 0,
+          "reactionQuote": "Did you see this alert? Sharing right away!"
+        },
+        {
+          "id": "agent_39",
+          "name": "Social Influencer #39",
+          "archetype": "influencer",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.7968630130868405,
+          "skepticism": 0.35331233963370323,
+          "sharingTendency": 0.8617437475826591,
+          "infoLiteracy": 0.519733092887327,
+          "connections": [
+            "agent_5",
+            "agent_9",
+            "agent_10",
+            "agent_12",
+            "agent_13",
+            "agent_14",
+            "agent_15",
+            "agent_16",
+            "agent_18",
+            "agent_23",
+            "agent_30",
+            "agent_31",
+            "agent_36",
+            "agent_37",
+            "agent_40",
+            "agent_41",
+            "agent_42",
+            "agent_45",
+            "agent_46",
+            "agent_47",
+            "agent_48",
+            "agent_52",
+            "agent_54",
+            "agent_57",
+            "agent_59"
+          ],
+          "x": 318,
+          "y": 20
+        },
+        {
+          "id": "agent_40",
+          "name": "Community Leader #40",
+          "archetype": "community_leader",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.6133917144034058,
+          "skepticism": 0.6759746193885803,
+          "sharingTendency": 0.48264901619404554,
+          "infoLiteracy": 0.7759470757329837,
+          "connections": [
+            "agent_5",
+            "agent_6",
+            "agent_9",
+            "agent_10",
+            "agent_12",
+            "agent_14",
+            "agent_15",
+            "agent_16",
+            "agent_18",
+            "agent_21",
+            "agent_23",
+            "agent_30",
+            "agent_36",
+            "agent_38",
+            "agent_39",
+            "agent_41",
+            "agent_45",
+            "agent_46",
+            "agent_49",
+            "agent_51",
+            "agent_52",
+            "agent_57",
+            "agent_59"
+          ],
+          "x": 300,
+          "y": 25
+        },
+        {
+          "id": "agent_41",
+          "name": "Fact Checker #41",
+          "archetype": "fact_checker",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.38830386004410683,
+          "skepticism": 0.8801720126997679,
+          "sharingTendency": 0.35734801515936854,
+          "infoLiteracy": 0.98,
+          "connections": [
+            "agent_2",
+            "agent_12",
+            "agent_16",
+            "agent_18",
+            "agent_39",
+            "agent_40",
+            "agent_46",
+            "agent_52"
+          ],
+          "x": 262,
+          "y": 128
+        },
+        {
+          "id": "agent_42",
+          "name": "Public Official #42",
+          "archetype": "official",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.597659917920828,
+          "skepticism": 0.7429659420624375,
+          "sharingTendency": 0.33717795549891894,
+          "infoLiteracy": 0.9320097540924326,
+          "connections": [
+            "agent_30",
+            "agent_38",
+            "agent_39",
+            "agent_51",
+            "agent_52",
+            "agent_59"
+          ],
+          "x": 175,
+          "y": 47
+        },
+        {
+          "id": "agent_43",
+          "name": "Health Professional #43",
+          "archetype": "health_professional",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.49998133508488535,
+          "skepticism": 0.8786430946085603,
+          "sharingTendency": 0.48505070693790914,
+          "infoLiteracy": 0.9381686165696009,
+          "connections": [
+            "agent_7",
+            "agent_17",
+            "agent_22",
+            "agent_24",
+            "agent_36",
+            "agent_50"
+          ],
+          "x": 624,
+          "y": 268
+        },
+        {
+          "id": "agent_44",
+          "name": "Resident #44",
+          "archetype": "ordinary_citizen",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.45866359523497524,
+          "skepticism": 0.38351842211559417,
+          "sharingTendency": 0.369512248551473,
+          "infoLiteracy": 0.49317277653608477,
+          "connections": [
+            "agent_6",
+            "agent_11",
+            "agent_19",
+            "agent_27",
+            "agent_32",
+            "agent_33",
+            "agent_34",
+            "agent_57"
+          ],
+          "x": 289,
+          "y": 489
+        },
+        {
+          "id": "agent_45",
+          "name": "Resident #45",
+          "archetype": "ordinary_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.4669499037321657,
+          "skepticism": 0.3565621289424598,
+          "sharingTendency": 0.4040537043940276,
+          "infoLiteracy": 0.5800034993677401,
+          "connections": [
+            "agent_2",
+            "agent_13",
+            "agent_16",
+            "agent_35",
+            "agent_38",
+            "agent_39",
+            "agent_40",
+            "agent_46"
+          ],
+          "x": 288,
+          "y": 52
+        },
+        {
+          "id": "agent_46",
+          "name": "Public Official #46",
+          "archetype": "official",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.6276281485334039,
+          "skepticism": 0.669015898834914,
+          "sharingTendency": 0.31995674688369036,
+          "infoLiteracy": 0.8990827759099193,
+          "connections": [
+            "agent_14",
+            "agent_18",
+            "agent_21",
+            "agent_34",
+            "agent_36",
+            "agent_39",
+            "agent_40",
+            "agent_41",
+            "agent_45",
+            "agent_50"
+          ],
+          "x": 244,
+          "y": 78
+        },
+        {
+          "id": "agent_47",
+          "name": "Critical Inquirer #47",
+          "archetype": "skeptical_citizen",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.3440908411517739,
+          "skepticism": 0.8538098321761936,
+          "sharingTendency": 0.24762081098742783,
+          "infoLiteracy": 0.7637888310360722,
+          "connections": [
+            "agent_15",
+            "agent_34",
+            "agent_35",
+            "agent_38",
+            "agent_39",
+            "agent_50",
+            "agent_55",
+            "agent_59"
+          ],
+          "x": 662,
+          "y": 288
+        },
+        {
+          "id": "agent_48",
+          "name": "Resident #48",
+          "archetype": "ordinary_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.4733180917799473,
+          "skepticism": 0.3617586236912757,
+          "sharingTendency": 0.3566313693765551,
+          "infoLiteracy": 0.5260779208736495,
+          "connections": [
+            "agent_5",
+            "agent_6",
+            "agent_23",
+            "agent_27",
+            "agent_33",
+            "agent_39"
+          ],
+          "x": 273,
+          "y": 101
+        },
+        {
+          "id": "agent_49",
+          "name": "Resident #49",
+          "archetype": "ordinary_citizen",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.6180009390227497,
+          "skepticism": 0.4183231932576746,
+          "sharingTendency": 0.47982849827967583,
+          "infoLiteracy": 0.47981223246315496,
+          "connections": [
+            "agent_26",
+            "agent_32",
+            "agent_40",
+            "agent_50",
+            "agent_58"
+          ],
+          "x": 294,
+          "y": 448
+        },
+        {
+          "id": "agent_50",
+          "name": "Community Leader #50",
+          "archetype": "community_leader",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.7070968677755446,
+          "skepticism": 0.6010150419082493,
+          "sharingTendency": 0.42762165190652013,
+          "infoLiteracy": 0.7373737472575158,
+          "connections": [
+            "agent_4",
+            "agent_21",
+            "agent_22",
+            "agent_24",
+            "agent_26",
+            "agent_29",
+            "agent_31",
+            "agent_35",
+            "agent_43",
+            "agent_46",
+            "agent_47",
+            "agent_49",
+            "agent_53"
+          ],
+          "x": 583,
+          "y": 335
+        },
+        {
+          "id": "agent_51",
+          "name": "Resident #51",
+          "archetype": "ordinary_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.548705889005214,
+          "skepticism": 0.5403167286422104,
+          "sharingTendency": 0.3850834529381245,
+          "infoLiteracy": 0.4968247355660424,
+          "connections": [
+            "agent_2",
+            "agent_10",
+            "agent_14",
+            "agent_15",
+            "agent_16",
+            "agent_18",
+            "agent_40",
+            "agent_42"
+          ],
+          "x": 242,
+          "y": 21
+        },
+        {
+          "id": "agent_52",
+          "name": "Critical Inquirer #52",
+          "archetype": "skeptical_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.24825952830724418,
+          "skepticism": 0.7769998386036604,
+          "sharingTendency": 0.28197738858871163,
+          "infoLiteracy": 0.7654181994264946,
+          "connections": [
+            "agent_5",
+            "agent_12",
+            "agent_15",
+            "agent_30",
+            "agent_36",
+            "agent_38",
+            "agent_39",
+            "agent_40",
+            "agent_41",
+            "agent_42",
+            "agent_54",
+            "agent_55"
+          ],
+          "x": 287,
+          "y": 134
+        },
+        {
+          "id": "agent_53",
+          "name": "Resident #53",
+          "archetype": "ordinary_citizen",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.599022934678942,
+          "skepticism": 0.35996982217766343,
+          "sharingTendency": 0.5415040882304311,
+          "infoLiteracy": 0.5620545077021234,
+          "connections": [
+            "agent_3",
+            "agent_6",
+            "agent_20",
+            "agent_27",
+            "agent_50"
+          ],
+          "x": 300,
+          "y": 534
+        },
+        {
+          "id": "agent_54",
+          "name": "Critical Inquirer #54",
+          "archetype": "skeptical_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.35220030657947066,
+          "skepticism": 0.8002071072813123,
+          "sharingTendency": 0.3225551952142268,
+          "infoLiteracy": 0.7433716912404634,
+          "connections": [
+            "agent_5",
+            "agent_11",
+            "agent_12",
+            "agent_13",
+            "agent_16",
+            "agent_32",
+            "agent_34",
+            "agent_36",
+            "agent_38",
+            "agent_39",
+            "agent_52"
+          ],
+          "x": 257,
+          "y": 59
+        },
+        {
+          "id": "agent_55",
+          "name": "Emergency Responder #55",
+          "archetype": "emergency_responder",
+          "group": "District A",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.6704998529981822,
+          "skepticism": 0.6674920190591365,
+          "sharingTendency": 0.4272695152554661,
+          "infoLiteracy": 0.9742482703062706,
+          "connections": [
+            "agent_7",
+            "agent_22",
+            "agent_24",
+            "agent_25",
+            "agent_28",
+            "agent_34",
+            "agent_38",
+            "agent_47",
+            "agent_52"
+          ],
+          "x": 637,
+          "y": 304
+        },
+        {
+          "id": "agent_56",
+          "name": "Emergency Responder #56",
+          "archetype": "emergency_responder",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.5969069528859109,
+          "skepticism": 0.7848532898817211,
+          "sharingTendency": 0.43167173978872597,
+          "infoLiteracy": 0.9718561087036506,
+          "connections": [
+            "agent_1",
+            "agent_8",
+            "agent_11",
+            "agent_19",
+            "agent_27",
+            "agent_33",
+            "agent_60"
+          ],
+          "x": 218,
+          "y": 600
+        },
+        {
+          "id": "agent_57",
+          "name": "Critical Inquirer #57",
+          "archetype": "skeptical_citizen",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.35244145705364643,
+          "skepticism": 0.8391929507255554,
+          "sharingTendency": 0.24703568117693067,
+          "infoLiteracy": 0.712827832752373,
+          "connections": [
+            "agent_1",
+            "agent_27",
+            "agent_39",
+            "agent_40",
+            "agent_44",
+            "agent_60"
+          ],
+          "x": 324,
+          "y": 537
+        },
+        {
+          "id": "agent_58",
+          "name": "Resident #58",
+          "archetype": "ordinary_citizen",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.5352063947822899,
+          "skepticism": 0.4003082695417106,
+          "sharingTendency": 0.450793233839795,
+          "infoLiteracy": 0.4811472382280045,
+          "connections": [
+            "agent_2",
+            "agent_6",
+            "agent_27",
+            "agent_36",
+            "agent_38",
+            "agent_49",
+            "agent_60"
+          ],
+          "x": 337,
+          "y": 554
+        },
+        {
+          "id": "agent_59",
+          "name": "Resident #59",
+          "archetype": "ordinary_citizen",
+          "group": "District C",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.5815839097835124,
+          "skepticism": 0.5120151290670037,
+          "sharingTendency": 0.3607515315525234,
+          "infoLiteracy": 0.5630009903921747,
+          "connections": [
+            "agent_10",
+            "agent_14",
+            "agent_34",
+            "agent_39",
+            "agent_40",
+            "agent_42",
+            "agent_47"
+          ],
+          "x": 210,
+          "y": 82
+        },
+        {
+          "id": "agent_60",
+          "name": "Emergency Responder #60",
+          "archetype": "emergency_responder",
+          "group": "District B",
+          "state": "UNEXPOSED",
+          "trustLevel": 0.5901083450298756,
+          "skepticism": 0.7654373904690146,
+          "sharingTendency": 0.4032598346471786,
+          "infoLiteracy": 0.9312424949021079,
+          "connections": [
+            "agent_19",
+            "agent_26",
+            "agent_56",
+            "agent_57",
+            "agent_58"
+          ],
+          "x": 270,
+          "y": 525
+        }
+      ],
+      "edges": [
+        {
+          "source": "agent_1",
+          "target": "agent_2"
+        },
+        {
+          "source": "agent_1",
+          "target": "agent_6"
+        },
+        {
+          "source": "agent_1",
+          "target": "agent_11"
+        },
+        {
+          "source": "agent_1",
+          "target": "agent_22"
+        },
+        {
+          "source": "agent_1",
+          "target": "agent_56"
+        },
+        {
+          "source": "agent_1",
+          "target": "agent_57"
+        },
+        {
+          "source": "agent_2",
+          "target": "agent_7"
+        },
+        {
+          "source": "agent_2",
+          "target": "agent_11"
+        },
+        {
+          "source": "agent_2",
+          "target": "agent_33"
+        },
+        {
+          "source": "agent_2",
+          "target": "agent_41"
+        },
+        {
+          "source": "agent_2",
+          "target": "agent_45"
+        },
+        {
+          "source": "agent_2",
+          "target": "agent_51"
+        },
+        {
+          "source": "agent_2",
+          "target": "agent_58"
+        },
+        {
+          "source": "agent_3",
+          "target": "agent_11"
+        },
+        {
+          "source": "agent_3",
+          "target": "agent_34"
+        },
+        {
+          "source": "agent_3",
+          "target": "agent_53"
+        },
+        {
+          "source": "agent_4",
+          "target": "agent_13"
+        },
+        {
+          "source": "agent_4",
+          "target": "agent_17"
+        },
+        {
+          "source": "agent_4",
+          "target": "agent_21"
+        },
+        {
+          "source": "agent_4",
+          "target": "agent_22"
+        },
+        {
+          "source": "agent_4",
+          "target": "agent_24"
+        },
+        {
+          "source": "agent_4",
+          "target": "agent_34"
+        },
+        {
+          "source": "agent_4",
+          "target": "agent_35"
+        },
+        {
+          "source": "agent_4",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_5",
+          "target": "agent_9"
+        },
+        {
+          "source": "agent_5",
+          "target": "agent_10"
+        },
+        {
+          "source": "agent_5",
+          "target": "agent_30"
+        },
+        {
+          "source": "agent_5",
+          "target": "agent_34"
+        },
+        {
+          "source": "agent_5",
+          "target": "agent_36"
+        },
+        {
+          "source": "agent_5",
+          "target": "agent_38"
+        },
+        {
+          "source": "agent_5",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_5",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_5",
+          "target": "agent_48"
+        },
+        {
+          "source": "agent_5",
+          "target": "agent_52"
+        },
+        {
+          "source": "agent_5",
+          "target": "agent_54"
+        },
+        {
+          "source": "agent_6",
+          "target": "agent_8"
+        },
+        {
+          "source": "agent_6",
+          "target": "agent_11"
+        },
+        {
+          "source": "agent_6",
+          "target": "agent_12"
+        },
+        {
+          "source": "agent_6",
+          "target": "agent_18"
+        },
+        {
+          "source": "agent_6",
+          "target": "agent_33"
+        },
+        {
+          "source": "agent_6",
+          "target": "agent_34"
+        },
+        {
+          "source": "agent_6",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_6",
+          "target": "agent_44"
+        },
+        {
+          "source": "agent_6",
+          "target": "agent_48"
+        },
+        {
+          "source": "agent_6",
+          "target": "agent_53"
+        },
+        {
+          "source": "agent_6",
+          "target": "agent_58"
+        },
+        {
+          "source": "agent_7",
+          "target": "agent_17"
+        },
+        {
+          "source": "agent_7",
+          "target": "agent_22"
+        },
+        {
+          "source": "agent_7",
+          "target": "agent_29"
+        },
+        {
+          "source": "agent_7",
+          "target": "agent_31"
+        },
+        {
+          "source": "agent_7",
+          "target": "agent_34"
+        },
+        {
+          "source": "agent_7",
+          "target": "agent_43"
+        },
+        {
+          "source": "agent_7",
+          "target": "agent_55"
+        },
+        {
+          "source": "agent_8",
+          "target": "agent_19"
+        },
+        {
+          "source": "agent_8",
+          "target": "agent_26"
+        },
+        {
+          "source": "agent_8",
+          "target": "agent_27"
+        },
+        {
+          "source": "agent_8",
+          "target": "agent_28"
+        },
+        {
+          "source": "agent_8",
+          "target": "agent_32"
+        },
+        {
+          "source": "agent_8",
+          "target": "agent_56"
+        },
+        {
+          "source": "agent_9",
+          "target": "agent_16"
+        },
+        {
+          "source": "agent_9",
+          "target": "agent_19"
+        },
+        {
+          "source": "agent_9",
+          "target": "agent_23"
+        },
+        {
+          "source": "agent_9",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_9",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_10",
+          "target": "agent_16"
+        },
+        {
+          "source": "agent_10",
+          "target": "agent_23"
+        },
+        {
+          "source": "agent_10",
+          "target": "agent_36"
+        },
+        {
+          "source": "agent_10",
+          "target": "agent_38"
+        },
+        {
+          "source": "agent_10",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_10",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_10",
+          "target": "agent_51"
+        },
+        {
+          "source": "agent_10",
+          "target": "agent_59"
+        },
+        {
+          "source": "agent_11",
+          "target": "agent_12"
+        },
+        {
+          "source": "agent_11",
+          "target": "agent_22"
+        },
+        {
+          "source": "agent_11",
+          "target": "agent_26"
+        },
+        {
+          "source": "agent_11",
+          "target": "agent_27"
+        },
+        {
+          "source": "agent_11",
+          "target": "agent_32"
+        },
+        {
+          "source": "agent_11",
+          "target": "agent_44"
+        },
+        {
+          "source": "agent_11",
+          "target": "agent_54"
+        },
+        {
+          "source": "agent_11",
+          "target": "agent_56"
+        },
+        {
+          "source": "agent_12",
+          "target": "agent_23"
+        },
+        {
+          "source": "agent_12",
+          "target": "agent_30"
+        },
+        {
+          "source": "agent_12",
+          "target": "agent_36"
+        },
+        {
+          "source": "agent_12",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_12",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_12",
+          "target": "agent_41"
+        },
+        {
+          "source": "agent_12",
+          "target": "agent_52"
+        },
+        {
+          "source": "agent_12",
+          "target": "agent_54"
+        },
+        {
+          "source": "agent_13",
+          "target": "agent_14"
+        },
+        {
+          "source": "agent_13",
+          "target": "agent_15"
+        },
+        {
+          "source": "agent_13",
+          "target": "agent_30"
+        },
+        {
+          "source": "agent_13",
+          "target": "agent_36"
+        },
+        {
+          "source": "agent_13",
+          "target": "agent_38"
+        },
+        {
+          "source": "agent_13",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_13",
+          "target": "agent_45"
+        },
+        {
+          "source": "agent_13",
+          "target": "agent_54"
+        },
+        {
+          "source": "agent_14",
+          "target": "agent_15"
+        },
+        {
+          "source": "agent_14",
+          "target": "agent_18"
+        },
+        {
+          "source": "agent_14",
+          "target": "agent_19"
+        },
+        {
+          "source": "agent_14",
+          "target": "agent_30"
+        },
+        {
+          "source": "agent_14",
+          "target": "agent_38"
+        },
+        {
+          "source": "agent_14",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_14",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_14",
+          "target": "agent_46"
+        },
+        {
+          "source": "agent_14",
+          "target": "agent_51"
+        },
+        {
+          "source": "agent_14",
+          "target": "agent_59"
+        },
+        {
+          "source": "agent_15",
+          "target": "agent_16"
+        },
+        {
+          "source": "agent_15",
+          "target": "agent_38"
+        },
+        {
+          "source": "agent_15",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_15",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_15",
+          "target": "agent_47"
+        },
+        {
+          "source": "agent_15",
+          "target": "agent_51"
+        },
+        {
+          "source": "agent_15",
+          "target": "agent_52"
+        },
+        {
+          "source": "agent_16",
+          "target": "agent_36"
+        },
+        {
+          "source": "agent_16",
+          "target": "agent_37"
+        },
+        {
+          "source": "agent_16",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_16",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_16",
+          "target": "agent_41"
+        },
+        {
+          "source": "agent_16",
+          "target": "agent_45"
+        },
+        {
+          "source": "agent_16",
+          "target": "agent_51"
+        },
+        {
+          "source": "agent_16",
+          "target": "agent_54"
+        },
+        {
+          "source": "agent_17",
+          "target": "agent_22"
+        },
+        {
+          "source": "agent_17",
+          "target": "agent_28"
+        },
+        {
+          "source": "agent_17",
+          "target": "agent_34"
+        },
+        {
+          "source": "agent_17",
+          "target": "agent_35"
+        },
+        {
+          "source": "agent_17",
+          "target": "agent_43"
+        },
+        {
+          "source": "agent_18",
+          "target": "agent_24"
+        },
+        {
+          "source": "agent_18",
+          "target": "agent_38"
+        },
+        {
+          "source": "agent_18",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_18",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_18",
+          "target": "agent_41"
+        },
+        {
+          "source": "agent_18",
+          "target": "agent_46"
+        },
+        {
+          "source": "agent_18",
+          "target": "agent_51"
+        },
+        {
+          "source": "agent_19",
+          "target": "agent_26"
+        },
+        {
+          "source": "agent_19",
+          "target": "agent_27"
+        },
+        {
+          "source": "agent_19",
+          "target": "agent_44"
+        },
+        {
+          "source": "agent_19",
+          "target": "agent_56"
+        },
+        {
+          "source": "agent_19",
+          "target": "agent_60"
+        },
+        {
+          "source": "agent_20",
+          "target": "agent_26"
+        },
+        {
+          "source": "agent_20",
+          "target": "agent_33"
+        },
+        {
+          "source": "agent_20",
+          "target": "agent_53"
+        },
+        {
+          "source": "agent_21",
+          "target": "agent_22"
+        },
+        {
+          "source": "agent_21",
+          "target": "agent_28"
+        },
+        {
+          "source": "agent_21",
+          "target": "agent_34"
+        },
+        {
+          "source": "agent_21",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_21",
+          "target": "agent_46"
+        },
+        {
+          "source": "agent_21",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_22",
+          "target": "agent_24"
+        },
+        {
+          "source": "agent_22",
+          "target": "agent_25"
+        },
+        {
+          "source": "agent_22",
+          "target": "agent_28"
+        },
+        {
+          "source": "agent_22",
+          "target": "agent_34"
+        },
+        {
+          "source": "agent_22",
+          "target": "agent_43"
+        },
+        {
+          "source": "agent_22",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_22",
+          "target": "agent_55"
+        },
+        {
+          "source": "agent_23",
+          "target": "agent_24"
+        },
+        {
+          "source": "agent_23",
+          "target": "agent_30"
+        },
+        {
+          "source": "agent_23",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_23",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_23",
+          "target": "agent_48"
+        },
+        {
+          "source": "agent_24",
+          "target": "agent_27"
+        },
+        {
+          "source": "agent_24",
+          "target": "agent_34"
+        },
+        {
+          "source": "agent_24",
+          "target": "agent_43"
+        },
+        {
+          "source": "agent_24",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_24",
+          "target": "agent_55"
+        },
+        {
+          "source": "agent_25",
+          "target": "agent_31"
+        },
+        {
+          "source": "agent_25",
+          "target": "agent_34"
+        },
+        {
+          "source": "agent_25",
+          "target": "agent_36"
+        },
+        {
+          "source": "agent_25",
+          "target": "agent_55"
+        },
+        {
+          "source": "agent_26",
+          "target": "agent_27"
+        },
+        {
+          "source": "agent_26",
+          "target": "agent_32"
+        },
+        {
+          "source": "agent_26",
+          "target": "agent_49"
+        },
+        {
+          "source": "agent_26",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_26",
+          "target": "agent_60"
+        },
+        {
+          "source": "agent_27",
+          "target": "agent_32"
+        },
+        {
+          "source": "agent_27",
+          "target": "agent_44"
+        },
+        {
+          "source": "agent_27",
+          "target": "agent_48"
+        },
+        {
+          "source": "agent_27",
+          "target": "agent_53"
+        },
+        {
+          "source": "agent_27",
+          "target": "agent_56"
+        },
+        {
+          "source": "agent_27",
+          "target": "agent_57"
+        },
+        {
+          "source": "agent_27",
+          "target": "agent_58"
+        },
+        {
+          "source": "agent_28",
+          "target": "agent_35"
+        },
+        {
+          "source": "agent_28",
+          "target": "agent_55"
+        },
+        {
+          "source": "agent_29",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_30",
+          "target": "agent_38"
+        },
+        {
+          "source": "agent_30",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_30",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_30",
+          "target": "agent_42"
+        },
+        {
+          "source": "agent_30",
+          "target": "agent_52"
+        },
+        {
+          "source": "agent_31",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_31",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_32",
+          "target": "agent_44"
+        },
+        {
+          "source": "agent_32",
+          "target": "agent_49"
+        },
+        {
+          "source": "agent_32",
+          "target": "agent_54"
+        },
+        {
+          "source": "agent_33",
+          "target": "agent_36"
+        },
+        {
+          "source": "agent_33",
+          "target": "agent_44"
+        },
+        {
+          "source": "agent_33",
+          "target": "agent_48"
+        },
+        {
+          "source": "agent_33",
+          "target": "agent_56"
+        },
+        {
+          "source": "agent_34",
+          "target": "agent_35"
+        },
+        {
+          "source": "agent_34",
+          "target": "agent_44"
+        },
+        {
+          "source": "agent_34",
+          "target": "agent_46"
+        },
+        {
+          "source": "agent_34",
+          "target": "agent_47"
+        },
+        {
+          "source": "agent_34",
+          "target": "agent_54"
+        },
+        {
+          "source": "agent_34",
+          "target": "agent_55"
+        },
+        {
+          "source": "agent_34",
+          "target": "agent_59"
+        },
+        {
+          "source": "agent_35",
+          "target": "agent_45"
+        },
+        {
+          "source": "agent_35",
+          "target": "agent_47"
+        },
+        {
+          "source": "agent_35",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_36",
+          "target": "agent_37"
+        },
+        {
+          "source": "agent_36",
+          "target": "agent_38"
+        },
+        {
+          "source": "agent_36",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_36",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_36",
+          "target": "agent_43"
+        },
+        {
+          "source": "agent_36",
+          "target": "agent_46"
+        },
+        {
+          "source": "agent_36",
+          "target": "agent_52"
+        },
+        {
+          "source": "agent_36",
+          "target": "agent_54"
+        },
+        {
+          "source": "agent_36",
+          "target": "agent_58"
+        },
+        {
+          "source": "agent_37",
+          "target": "agent_38"
+        },
+        {
+          "source": "agent_37",
+          "target": "agent_39"
+        },
+        {
+          "source": "agent_38",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_38",
+          "target": "agent_42"
+        },
+        {
+          "source": "agent_38",
+          "target": "agent_45"
+        },
+        {
+          "source": "agent_38",
+          "target": "agent_47"
+        },
+        {
+          "source": "agent_38",
+          "target": "agent_52"
+        },
+        {
+          "source": "agent_38",
+          "target": "agent_54"
+        },
+        {
+          "source": "agent_38",
+          "target": "agent_55"
+        },
+        {
+          "source": "agent_38",
+          "target": "agent_58"
+        },
+        {
+          "source": "agent_39",
+          "target": "agent_40"
+        },
+        {
+          "source": "agent_39",
+          "target": "agent_41"
+        },
+        {
+          "source": "agent_39",
+          "target": "agent_42"
+        },
+        {
+          "source": "agent_39",
+          "target": "agent_45"
+        },
+        {
+          "source": "agent_39",
+          "target": "agent_46"
+        },
+        {
+          "source": "agent_39",
+          "target": "agent_47"
+        },
+        {
+          "source": "agent_39",
+          "target": "agent_48"
+        },
+        {
+          "source": "agent_39",
+          "target": "agent_52"
+        },
+        {
+          "source": "agent_39",
+          "target": "agent_54"
+        },
+        {
+          "source": "agent_39",
+          "target": "agent_57"
+        },
+        {
+          "source": "agent_39",
+          "target": "agent_59"
+        },
+        {
+          "source": "agent_40",
+          "target": "agent_41"
+        },
+        {
+          "source": "agent_40",
+          "target": "agent_45"
+        },
+        {
+          "source": "agent_40",
+          "target": "agent_46"
+        },
+        {
+          "source": "agent_40",
+          "target": "agent_49"
+        },
+        {
+          "source": "agent_40",
+          "target": "agent_51"
+        },
+        {
+          "source": "agent_40",
+          "target": "agent_52"
+        },
+        {
+          "source": "agent_40",
+          "target": "agent_57"
+        },
+        {
+          "source": "agent_40",
+          "target": "agent_59"
+        },
+        {
+          "source": "agent_41",
+          "target": "agent_46"
+        },
+        {
+          "source": "agent_41",
+          "target": "agent_52"
+        },
+        {
+          "source": "agent_42",
+          "target": "agent_51"
+        },
+        {
+          "source": "agent_42",
+          "target": "agent_52"
+        },
+        {
+          "source": "agent_42",
+          "target": "agent_59"
+        },
+        {
+          "source": "agent_43",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_44",
+          "target": "agent_57"
+        },
+        {
+          "source": "agent_45",
+          "target": "agent_46"
+        },
+        {
+          "source": "agent_46",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_47",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_47",
+          "target": "agent_55"
+        },
+        {
+          "source": "agent_47",
+          "target": "agent_59"
+        },
+        {
+          "source": "agent_49",
+          "target": "agent_50"
+        },
+        {
+          "source": "agent_49",
+          "target": "agent_58"
+        },
+        {
+          "source": "agent_50",
+          "target": "agent_53"
+        },
+        {
+          "source": "agent_52",
+          "target": "agent_54"
+        },
+        {
+          "source": "agent_52",
+          "target": "agent_55"
+        },
+        {
+          "source": "agent_56",
+          "target": "agent_60"
+        },
+        {
+          "source": "agent_57",
+          "target": "agent_60"
+        },
+        {
+          "source": "agent_58",
+          "target": "agent_60"
+        }
+      ],
+      "metricsHistory": [
+        {
+          "step": 0,
+          "unexposedCount": 57,
+          "exposedCount": 0,
+          "sharingCount": 3,
+          "questioningCount": 0,
+          "correctingCount": 0,
+          "verifiedCount": 0,
+          "averageTrust": 0.55,
+          "totalShares": 3,
+          "totalCorrections": 0
+        }
+      ],
+      "events": [
+        {
+          "step": 0,
+          "type": "share",
+          "agentId": "agent_1",
+          "agentName": "Fact Checker #1",
+          "archetype": "fact_checker",
+          "description": "Initial rumor posted: \"Bridge collapsed\""
+        }
+      ],
+      "summary": {
+        "peakExposureFraction": 0.05,
+        "totalShares": 1,
+        "totalCorrections": 0,
+        "finalVerifiedFraction": 0,
+        "timeToFiftyPercentCorrection": null,
+        "trustDelta": 0,
+        "uncorrectedExposed": 0
+      }
+    }
+  ],
+  "experiments": [],
+  "evidenceLibrary": [
+    {
+      "id": "ev_1",
+      "name": "National Disaster Management Authority (NDMA)",
+      "url": "https://ndma.gov/bulletins/monsoon-flood-alert-092",
+      "sourceType": "official_agency",
+      "publicationDate": "2026-11-08T06:30:00Z",
+      "retrievalDate": "2026-11-08T07:15:00Z",
+      "excerpt": "NDMA Situation Report #14: River levels at Central Valley Basin remain within elevated amber alert thresholds. Major infrastructure, including the Grand River Crossing and Metro Suspension Bridge, has been inspected by structural corps engineers and is deemed structurally sound and open for authorized vehicle traffic.",
+      "stance": "contradicting",
+      "reliabilityRating": "high",
+      "limitations": "Covers designated federal highways and primary municipal bridges; local unpaved culverts remain under monitoring."
+    },
+    {
+      "id": "ev_2",
+      "name": "State Department of Transportation Inspection Bureau",
+      "url": "https://dot.state.gov/traffic/bridge-monitoring-live",
+      "sourceType": "official_agency",
+      "publicationDate": "2026-11-08T07:00:00Z",
+      "retrievalDate": "2026-11-08T07:18:00Z",
+      "excerpt": "Live sensor telemetry on Grand River Crossing reports normal strain gauge tolerances. Rumors circulating on messaging networks claiming catastrophic deck failure are false.",
+      "stance": "contradicting",
+      "reliabilityRating": "high",
+      "limitations": "Direct telemetry available on 18 core arterial bridges."
+    },
+    {
+      "id": "ev_3",
+      "name": "Global FactCheck Alliance - Emergency Dispatch",
+      "url": "https://factcheck.org/emergency/debunk-valley-bridge-collapse",
+      "sourceType": "fact_checker",
+      "publicationDate": "2026-11-08T07:10:00Z",
+      "retrievalDate": "2026-11-08T07:22:00Z",
+      "excerpt": "Viral video showing collapsed steel spans with floodwaters is misattributed footage from a 2019 cyclone in another continent, recycled with a local audio voiceover.",
+      "stance": "contradicting",
+      "reliabilityRating": "high",
+      "limitations": "Reverse image verification matches 2019 archive video footage."
+    },
+    {
+      "id": "ev_4",
+      "name": "Geological Survey & Seismology Network",
+      "url": "https://earthquake.usgs.gov/clarifications/rumor-prediction-debunk",
+      "sourceType": "scientific_body",
+      "publicationDate": "2026-10-15T12:00:00Z",
+      "retrievalDate": "2026-11-08T07:20:00Z",
+      "excerpt": "Neither USGS nor any other scientists have ever predicted a major earthquake. We do not know how and we do not expect to know how in the foreseeable future. Claims of a '9.0 magnitude quake guaranteed at 3:00 PM tomorrow' have no scientific validity.",
+      "stance": "contradicting",
+      "reliabilityRating": "high",
+      "limitations": "Statistical aftershock probability models exist, but exact deterministic time predictions are impossible with current geophysical science."
+    },
+    {
+      "id": "ev_5",
+      "name": "World Health Organization Outbreak Factsheet",
+      "url": "https://who.int/emergencies/respiratory-clarifications-2026",
+      "sourceType": "scientific_body",
+      "publicationDate": "2026-09-12T08:00:00Z",
+      "retrievalDate": "2026-11-08T07:25:00Z",
+      "excerpt": "No evidence supports claims that concentrated saline inhalation or industrial bleach mists neutralize viral infection. Such practices present acute respiratory mucosal hazard.",
+      "stance": "contradicting",
+      "reliabilityRating": "high",
+      "limitations": "Peer-reviewed medical trials consensus."
+    }
+  ],
+  "evaluationReports": [
+    {
+      "id": "eval_rep_1794153186573",
+      "timestamp": "2026-11-08T15:53:06.573Z",
+      "datasetName": "WAICY Crisis Claims Benchmark (v2.6)",
+      "totalClaims": 20,
+      "accuracy": 1,
+      "macroPrecision": 1,
+      "macroRecall": 1,
+      "macroF1": 1,
+      "citationCoverage": 1,
+      "unsupportedRate": 0,
+      "abstentionRate": 0,
+      "confusionMatrix": {
+        "TRUE": {
+          "TRUE": 5,
+          "FALSE": 0,
+          "MOSTLY TRUE": 0,
+          "PARTLY TRUE": 0,
+          "MISLEADING": 0,
+          "OUT OF CONTEXT": 0,
+          "UNVERIFIED": 0,
+          "INSUFFICIENT EVIDENCE": 0
+        },
+        "FALSE": {
+          "TRUE": 0,
+          "FALSE": 12,
+          "MOSTLY TRUE": 0,
+          "PARTLY TRUE": 0,
+          "MISLEADING": 0,
+          "OUT OF CONTEXT": 0,
+          "UNVERIFIED": 0,
+          "INSUFFICIENT EVIDENCE": 0
+        },
+        "MOSTLY TRUE": {
+          "TRUE": 0,
+          "FALSE": 0,
+          "MOSTLY TRUE": 2,
+          "PARTLY TRUE": 0,
+          "MISLEADING": 0,
+          "OUT OF CONTEXT": 0,
+          "UNVERIFIED": 0,
+          "INSUFFICIENT EVIDENCE": 0
+        },
+        "PARTLY TRUE": {
+          "TRUE": 0,
+          "FALSE": 0,
+          "MOSTLY TRUE": 0,
+          "PARTLY TRUE": 0,
+          "MISLEADING": 0,
+          "OUT OF CONTEXT": 0,
+          "UNVERIFIED": 0,
+          "INSUFFICIENT EVIDENCE": 0
+        },
+        "MISLEADING": {
+          "TRUE": 0,
+          "FALSE": 0,
+          "MOSTLY TRUE": 0,
+          "PARTLY TRUE": 0,
+          "MISLEADING": 1,
+          "OUT OF CONTEXT": 0,
+          "UNVERIFIED": 0,
+          "INSUFFICIENT EVIDENCE": 0
+        },
+        "OUT OF CONTEXT": {
+          "TRUE": 0,
+          "FALSE": 0,
+          "MOSTLY TRUE": 0,
+          "PARTLY TRUE": 0,
+          "MISLEADING": 0,
+          "OUT OF CONTEXT": 0,
+          "UNVERIFIED": 0,
+          "INSUFFICIENT EVIDENCE": 0
+        },
+        "UNVERIFIED": {
+          "TRUE": 0,
+          "FALSE": 0,
+          "MOSTLY TRUE": 0,
+          "PARTLY TRUE": 0,
+          "MISLEADING": 0,
+          "OUT OF CONTEXT": 0,
+          "UNVERIFIED": 0,
+          "INSUFFICIENT EVIDENCE": 0
+        },
+        "INSUFFICIENT EVIDENCE": {
+          "TRUE": 0,
+          "FALSE": 0,
+          "MOSTLY TRUE": 0,
+          "PARTLY TRUE": 0,
+          "MISLEADING": 0,
+          "OUT OF CONTEXT": 0,
+          "UNVERIFIED": 0,
+          "INSUFFICIENT EVIDENCE": 0
+        }
+      },
+      "classMetrics": {
+        "TRUE": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "support": 5
+        },
+        "FALSE": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "support": 12
+        },
+        "MOSTLY TRUE": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "support": 2
+        },
+        "PARTLY TRUE": {
+          "precision": 0,
+          "recall": 0,
+          "f1": 0,
+          "support": 0
+        },
+        "MISLEADING": {
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "support": 1
+        },
+        "OUT OF CONTEXT": {
+          "precision": 0,
+          "recall": 0,
+          "f1": 0,
+          "support": 0
+        },
+        "UNVERIFIED": {
+          "precision": 0,
+          "recall": 0,
+          "f1": 0,
+          "support": 0
+        },
+        "INSUFFICIENT EVIDENCE": {
+          "precision": 0,
+          "recall": 0,
+          "f1": 0,
+          "support": 0
+        }
+      },
+      "items": [
+        {
+          "id": "eval_01",
+          "claim": "Scientists have predicted a 9.2 magnitude earthquake in California at 3:00 PM tomorrow.",
+          "domain": "Earthquake Rumors",
+          "groundTruthVerdict": "FALSE",
+          "context": "Viral TikTok and WhatsApp audio claiming seismologists privately alerted government officials.",
+          "referenceSource": "US Geological Survey (USGS) Earthquake Hazards Clarification Bulletin.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_02",
+          "claim": "Drinking 100% pure chlorine dioxide solution prevents viral respiratory transmission during epidemics.",
+          "domain": "Health Hazards",
+          "groundTruthVerdict": "FALSE",
+          "context": "Substack article and Telegram channels selling industrial mineral solutions as miracle cures.",
+          "referenceSource": "World Health Organization & FDA Public Health Warning #2024-09.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_03",
+          "claim": "The Grand River Crossing remains open and safe for designated emergency response vehicles.",
+          "domain": "Infrastructure & Floods",
+          "groundTruthVerdict": "TRUE",
+          "context": "Department of Transportation official press release with real-time bridge sensor data.",
+          "referenceSource": "State Department of Transportation Inspection Bureau.",
+          "predictedVerdict": "TRUE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_04",
+          "claim": "Opening all house windows during a Category 4 hurricane equalizes indoor air pressure to prevent roof collapse.",
+          "domain": "Severe Weather",
+          "groundTruthVerdict": "FALSE",
+          "context": "Decades-old folkloric hurricane myth recirculated on Facebook during hurricane warnings.",
+          "referenceSource": "National Oceanic and Atmospheric Administration (NOAA) / FEMA Hurricane Safety Manual.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_05",
+          "claim": "FEMA is confiscating civilian emergency supplies and diverting donation trucks at state borders.",
+          "domain": "Relief Disinformation",
+          "groundTruthVerdict": "FALSE",
+          "context": "Conspiracy video posted during flood disaster relief operations.",
+          "referenceSource": "FEMA Rumor Response & American Red Cross Dispatch.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_06",
+          "claim": "Flash flooding in mountainous canyons can occur even when no rain is falling directly overhead at your location.",
+          "domain": "Hydrology & Public Safety",
+          "groundTruthVerdict": "TRUE",
+          "context": "Park service advisory regarding upstream storm runoffs travelling miles down dry riverbeds.",
+          "referenceSource": "National Weather Service Flash Flood Preparedness Guide.",
+          "predictedVerdict": "TRUE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_07",
+          "claim": "An unofficial viral GoFundMe link managed by 'DisasterReliefGlobalHQ' is the sole authorized fund for city flood victims.",
+          "domain": "Relief Fraud",
+          "groundTruthVerdict": "FALSE",
+          "context": "Newly registered crowdfunding account using stolen emergency service logos.",
+          "referenceSource": "State Attorney General Consumer Protection Alert.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_08",
+          "claim": "Wildfire smoke masks labeled N95 effectively filter harmful microscopic particulate matter (PM2.5) when fitted properly.",
+          "domain": "Wildfire Safety",
+          "groundTruthVerdict": "TRUE",
+          "context": "Public health guidance issued during regional wildfire inversion events.",
+          "referenceSource": "CDC NIOSH Certified Respiratory Protection Guide.",
+          "predictedVerdict": "TRUE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_09",
+          "claim": "A secret military acoustic beam weapon triggered the recent coastal landslide.",
+          "domain": "Geotechnical Rumors",
+          "groundTruthVerdict": "FALSE",
+          "context": "YouTube influencer claiming radar anomalies caused sudden hillside slippage after 3 weeks of continuous rain.",
+          "referenceSource": "Geological Survey Hydrologic Soil Saturation Report.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_10",
+          "claim": "The city municipal water grid has been 100% contaminated with industrial cyanide following river flooding.",
+          "domain": "Municipal Utilities",
+          "groundTruthVerdict": "FALSE",
+          "context": "Unverified SMS warning attributing alert to local hospital staff.",
+          "referenceSource": "Municipal Water Reclamation Authority Hourly Lab Diagnostics.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_11",
+          "claim": "Certain high-elevation secondary roads in District 4 experienced localized culvert washouts and are closed.",
+          "domain": "Road Conditions",
+          "groundTruthVerdict": "MOSTLY TRUE",
+          "context": "Local council alert confirming road closure on Route 42 while Route 40 remains navigable.",
+          "referenceSource": "County Highway Maintenance Log #882.",
+          "predictedVerdict": "MOSTLY TRUE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_12",
+          "claim": "An earthquake swarm under Yellowstone caldera means a supervolcanic eruption is imminent this weekend.",
+          "domain": "Geological Hazards",
+          "groundTruthVerdict": "MISLEADING",
+          "context": "Sensationalist tabloid taking regular microseismic activity out of context.",
+          "referenceSource": "Yellowstone Volcano Observatory (USGS Monthly Status).",
+          "predictedVerdict": "MISLEADING",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_13",
+          "claim": "A new unidentified biological pathogen is causing spontaneous blindness in 80% of affected patients.",
+          "domain": "Epidemic Rumors",
+          "groundTruthVerdict": "FALSE",
+          "context": "Fabricated audio memo imitating a nurse from an unnamed university clinic.",
+          "referenceSource": "National Public Health Institute Epidemiological Surveillance.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_14",
+          "claim": "Local cellular towers may experience intermittent congestion during peak evacuation hours.",
+          "domain": "Communications",
+          "groundTruthVerdict": "TRUE",
+          "context": "Telecommunications regulatory advisory recommending text messaging over voice calls in emergencies.",
+          "referenceSource": "Federal Communications Commission (FCC) Emergency Communications Guide.",
+          "predictedVerdict": "TRUE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_15",
+          "claim": "A viral photo depicts sharks swimming down flooded highway ramps in the city center.",
+          "domain": "Flood Hoaxes",
+          "groundTruthVerdict": "FALSE",
+          "context": "Recycled satirical shark-on-highway composite image that has appeared in every hurricane since 2011.",
+          "referenceSource": "Snopes / Reuters Fact Check Archives.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_16",
+          "claim": "Applying raw butter to acute second-degree wildfire burns soothes tissue and accelerates healing.",
+          "domain": "Burn First Aid",
+          "groundTruthVerdict": "FALSE",
+          "context": "Viral traditional folk remedy circulating on Pinterest and parenting forums.",
+          "referenceSource": "American Burn Association Emergency Care Protocols.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_17",
+          "claim": "Emergency shelters accept companion pets when crated according to municipal emergency protocols.",
+          "domain": "Emergency Evacuation",
+          "groundTruthVerdict": "MOSTLY TRUE",
+          "context": "Civil protection guidance under the PETS Act (Pets Evacuation and Transportation Standards).",
+          "referenceSource": "FEMA & Humane Society Emergency Pet Protocol.",
+          "predictedVerdict": "MOSTLY TRUE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_18",
+          "claim": "A secret meeting between council leaders agreed to intentionally flood the lower district to save downtown villas.",
+          "domain": "Disaster Politics",
+          "groundTruthVerdict": "FALSE",
+          "context": "Anonymous blog post inciting civil unrest outside city hall.",
+          "referenceSource": "Civil Engineering Hydrology Basin Drainage Blueprint.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_19",
+          "claim": "Volunteers entering disaster zones without personal flotation devices risk severe secondary hypothermia.",
+          "domain": "First Responder Safety",
+          "groundTruthVerdict": "TRUE",
+          "context": "Search and Rescue Volunteer Training Advisory.",
+          "referenceSource": "National Search and Rescue Committee Guidelines.",
+          "predictedVerdict": "TRUE",
+          "citationFound": true,
+          "isCorrect": true
+        },
+        {
+          "id": "eval_20",
+          "claim": "An anonymous text claims power will be cut permanently to the entire state for 3 months.",
+          "domain": "Critical Infrastructure",
+          "groundTruthVerdict": "FALSE",
+          "context": "Chain message attempting to cause panic runs on fuel stations.",
+          "referenceSource": "State Electric Reliability Council Public Release.",
+          "predictedVerdict": "FALSE",
+          "citationFound": true,
+          "isCorrect": true
+        }
+      ]
+    }
+  ]
+}

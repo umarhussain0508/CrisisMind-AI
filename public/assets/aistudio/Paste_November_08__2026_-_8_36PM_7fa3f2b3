@@ -1,0 +1,1727 @@
+# MASTER DEVELOPMENT PROMPT — CRISIS MIND AI
+## WAICY 2026 | AI Large Language Model Track | Advanced Competition Project
+
+You are an expert AI engineer, full-stack developer, research scientist, UI/UX designer, simulation engineer, and competition project mentor.
+
+Your task is to build a complete, advanced, functional, production-quality AI project named:
+
+# CrisisMind AI
+### Intelligent Crisis Simulation, Misinformation Detection & Community Protection System
+
+Tagline:
+**“Understand the Crisis. Stop the Misinformation. Protect the Community.”**
+
+The project is intended for the **WAICY 2026 AI Large Language Model Track**.
+
+Do not build a basic chatbot, static dashboard, fake AI interface, or simple informational website.
+
+Build a real, interactive, technically sophisticated AI application that demonstrates meaningful use of Large Language Models, AI reasoning, evidence analysis, multi-agent simulation, measurable experimentation, and responsible AI.
+
+The project must be educational, innovative, explainable, visually impressive, scientifically evaluated, and suitable for a student-led international AI competition.
+
+---
+
+# PART 1 — CORE PROJECT VISION
+
+CrisisMind AI is an AI-powered platform that investigates how misinformation spreads during emergencies and helps users identify potentially false information before it causes harm.
+
+The application has two major intelligence systems:
+
+1. **LinkCheck AI:** Investigates real-world claims, social media posts, news articles, and links using AI-assisted evidence analysis.
+2. **Crisis Simulation Lab:** Simulates virtual communities experiencing an emergency and measures how misinformation spreads, how people react, and which interventions reduce harmful information.
+
+Both systems must work independently and also connect to one another.
+
+For example:
+
+A user investigates a suspicious flood-relief message using LinkCheck AI.
+
+The system identifies the claim, investigates available evidence, presents an evidence-supported verdict, and explains the uncertainty.
+
+The user can then import that claim into the Crisis Simulation Lab.
+
+The simulation creates a virtual community in which people encounter the claim, share it, question it, or correct it.
+
+The user tests different interventions and discovers which approaches reduce misinformation most effectively.
+
+The project should demonstrate a complete intelligent workflow:
+
+**Real Claim → AI Investigation → Evidence Analysis → Community Simulation → Intervention Testing → Scientific Results → Actionable Insights**
+
+---
+
+# PART 2 — TECHNOLOGY STACK
+
+Use a modern, reliable, maintainable architecture.
+
+## Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Recharts
+- React Flow or an equivalent graph visualization library
+- React Router
+
+## Backend
+
+- Node.js
+- TypeScript
+- Express or Fastify
+- Zod validation
+- Server-side AI service integration
+- Secure environment variables
+
+## AI
+
+Use the official Gemini API through the backend.
+
+Prefer a current, supported Gemini model with strong reasoning and multimodal capabilities.
+
+Do not hardcode an outdated model name.
+
+Create an environment variable:
+
+GEMINI_MODEL=
+
+The application must allow the model to be changed without rewriting the code.
+
+## Database
+
+Use SQLite for local development or PostgreSQL for deployment.
+
+Store:
+
+- User preferences
+- Investigations
+- Evidence records
+- Simulation configurations
+- Simulation results
+- Intervention experiments
+- Saved reports
+- Evaluation datasets
+
+## Testing
+
+Use:
+
+- Vitest
+- React Testing Library
+- Playwright
+- Backend integration tests
+
+## Deployment
+
+Prepare the application for deployment on a suitable hosting provider.
+
+Do not expose API keys in frontend code.
+
+---
+
+# PART 3 — PROFESSIONAL APPLICATION DESIGN
+
+Create a premium, futuristic, scientific dashboard.
+
+Design inspiration:
+
+- Advanced intelligence research laboratory
+- Crisis response command center
+- Modern AI research platform
+- Professional scientific visualization software
+
+Do not copy an existing product.
+
+## Visual Identity
+
+Product name: CrisisMind AI
+
+Primary colors:
+
+- Midnight navy
+- Deep charcoal
+- Electric blue
+- Cyan
+- Soft white
+- Muted violet
+- Carefully used amber and red for warnings
+
+Use subtle gradients, translucent panels, elegant borders, smooth animations, and readable typography.
+
+The application should look like a serious AI research product.
+
+Avoid:
+
+- Excessive neon
+- Random glowing elements
+- Unnecessary animations
+- Overcrowded dashboards
+- Excessive rounded cards
+- Fake live data
+- Fake AI-generated metrics
+- Unreadable tiny text
+
+Create a professional logo using a shield, interconnected nodes, or a brain-and-network concept.
+
+## Main Layout
+
+Create:
+
+- Collapsible sidebar
+- Top navigation bar
+- Global search
+- Notification center
+- Project status
+- User profile
+- Dark mode
+- Responsive mobile layout
+
+Sidebar navigation:
+
+1. Overview
+2. LinkCheck AI
+3. Crisis Simulation
+4. Strategy Lab
+5. Evidence Library
+6. AI Research Analyst
+7. Evaluation Center
+8. Reports
+9. Settings
+10. About
+
+---
+
+# PART 4 — MAIN DASHBOARD
+
+Build a fully functional dashboard.
+
+The dashboard must display actual information calculated from the application.
+
+Include:
+
+## Overview Metrics
+
+- Total investigations
+- Claims analyzed
+- Simulation experiments completed
+- Average misinformation exposure
+- Average correction rate
+- Intervention effectiveness
+- Number of evidence sources collected
+
+These values must come from actual stored data.
+
+If there is no data, show an attractive empty state.
+
+Never generate random numbers merely to make the dashboard look populated.
+
+## Dashboard Visualizations
+
+Include:
+
+- Misinformation spread over time
+- Community trust over time
+- Correction effectiveness
+- Comparison of intervention strategies
+- Network visualization
+- Recent investigations
+- Recent experiments
+- Latest AI research insights
+
+Every chart must use real application data.
+
+## Quick Actions
+
+Provide working buttons:
+
+- Analyze a Link
+- Investigate a Claim
+- Start a Simulation
+- Run Strategy Experiment
+- Generate Research Report
+
+---
+
+# PART 5 — LINKCHECK AI
+# REAL-WORLD AI FACT-CHECKING SYSTEM
+
+This is one of the most important features.
+
+Build a complete fact-checking and evidence investigation system.
+
+## 5.1 Input Methods
+
+Users should be able to investigate information through:
+
+### A. URL Input
+
+Provide a URL input field.
+
+Support attempts to analyze accessible public:
+
+- News articles
+- Webpages
+- Public X posts
+- Public Facebook posts
+- Public Instagram posts
+- Public YouTube videos
+- Public blogs
+- Public information pages
+
+Important:
+
+Do not promise that every social media link can be accessed.
+
+Many social platforms restrict automated access, require authentication, block requests, or provide incomplete content.
+
+Implement platform-specific adapters where legally and technically appropriate.
+
+If a URL cannot be accessed:
+
+- Explain the limitation.
+- Never pretend the content was successfully retrieved.
+- Ask the user to paste the text.
+- Allow a screenshot or document upload.
+- Allow a transcript to be supplied.
+- Analyze only the information actually available.
+
+### B. Text Input
+
+Allow users to paste:
+
+- A social media post
+- A news headline
+- A suspicious message
+- A WhatsApp forward
+- An emergency alert
+- A political or public claim
+- A health-related claim
+- A disaster-related claim
+
+### C. Image Input
+
+Allow users to upload screenshots.
+
+Use multimodal AI to:
+
+- Read visible text
+- Identify claims
+- Extract relevant information
+- Explain what is visible
+- Detect possible misleading context
+
+Do not claim to detect image manipulation unless a real image-forensics component exists.
+
+### D. Video Input
+
+Support accessible video transcripts or user-provided transcripts.
+
+If actual video analysis is available, clearly distinguish visual analysis from transcript analysis.
+
+---
+
+## 5.2 Claim Extraction Engine
+
+When a user submits content, the AI should identify the factual claims.
+
+Extract:
+
+- Main claim
+- Supporting claims
+- Date
+- Location
+- Named people or organizations
+- Quantitative statements
+- Emergency instructions
+- Potentially harmful instructions
+- Missing context
+- Claims requiring verification
+
+Return structured JSON.
+
+Example:
+
+{
+  "mainClaim": "A particular dam has collapsed",
+  "claimType": "emergency",
+  "location": "Example Region",
+  "entities": ["Example Dam"],
+  "timeSensitivity": "high",
+  "requiresVerification": true,
+  "potentialRisk": "public panic",
+  "extractedClaims": []
+}
+
+Validate the JSON using Zod.
+
+---
+
+## 5.3 Evidence Retrieval
+
+Implement an actual evidence retrieval system.
+
+Use approved, accessible sources such as:
+
+- Official government announcements
+- Disaster management agencies
+- Relevant scientific organizations
+- Reputable news sources
+- Official emergency services
+- Public health agencies
+- Research publications
+- Fact-checking organizations
+
+Create an evidence provider abstraction so providers can be added or replaced.
+
+Use available search APIs or permitted public endpoints.
+
+Do not scrape restricted platforms or bypass authentication.
+
+For accessible webpage content, use Gemini URL Context when supported by the selected model and API.
+
+For web search, integrate a real search provider through the backend.
+
+Do not invent evidence.
+
+Do not invent source URLs.
+
+Do not fabricate quotes.
+
+Do not cite a source that was not actually retrieved or inspected.
+
+## Evidence Collection Pipeline
+
+1. Identify claims.
+2. Generate neutral search queries.
+3. Retrieve relevant sources.
+4. Extract supporting passages.
+5. Extract contradicting passages.
+6. Identify source publication dates.
+7. Identify source types.
+8. Check whether sources are independent.
+9. Compare evidence against each claim.
+10. Determine evidence limitations.
+11. Generate an evidence-supported assessment.
+
+Include an evidence collection progress indicator.
+
+---
+
+## 5.4 Evidence Classification
+
+Classify evidence into:
+
+- Supporting
+- Contradicting
+- Contextual
+- Inconclusive
+
+For each source, display:
+
+- Source name
+- Source URL
+- Publication date if available
+- Retrieval date
+- Relevant excerpt
+- Relationship to claim
+- Source type
+- Reliability limitations
+
+Never equate popularity with reliability.
+
+Never assume an official source is automatically correct.
+
+Never treat multiple websites copying the same original source as independent confirmation.
+
+---
+
+## 5.5 Fact-Check Verdict Engine
+
+The verdict system must use these labels:
+
+- TRUE
+- FALSE
+- MOSTLY TRUE
+- PARTLY TRUE
+- MISLEADING
+- OUT OF CONTEXT
+- UNVERIFIED
+- INSUFFICIENT EVIDENCE
+
+The AI must distinguish between:
+
+- Verified facts
+- Reasonable interpretations
+- Unsupported claims
+- Predictions
+- Opinions
+- Satire
+- Ambiguous statements
+
+Do not force a verdict when evidence is insufficient.
+
+A claim can be UNVERIFIED without being FALSE.
+
+## Verdict Output
+
+Every investigation should produce:
+
+- Original submitted content
+- Extracted claim
+- Verdict
+- Plain-language explanation
+- Supporting evidence
+- Contradicting evidence
+- Important context
+- Source citations
+- Evidence limitations
+- Investigation date
+- AI-generated analysis disclaimer
+
+Use a confidence or evidence-strength indicator only if it is clearly defined and properly calibrated.
+
+Do not display fake probabilities such as 99.9% truth.
+
+Distinguish:
+
+- Evidence strength
+- Source agreement
+- Model uncertainty
+- Statistical confidence
+
+These are different concepts.
+
+---
+
+## 5.6 LinkCheck AI Interface
+
+Create a beautiful investigation page.
+
+### Input Screen
+
+Large central investigation box:
+
+"Paste a link, claim, screenshot, or message to investigate."
+
+Buttons:
+
+- Analyze URL
+- Analyze Text
+- Upload Screenshot
+
+### Investigation Screen
+
+Display:
+
+- Claim summary
+- Verdict indicator
+- Evidence strength
+- Evidence timeline
+- Supporting sources
+- Contradicting sources
+- AI explanation
+- Context analysis
+- Limitations
+- Suggested verification steps
+
+### Evidence Graph
+
+Create an interactive graph connecting:
+
+- Claims
+- Sources
+- Supporting evidence
+- Contradicting evidence
+- Entities
+- Related claims
+
+Allow users to click nodes and inspect evidence.
+
+### Investigation History
+
+Users can:
+
+- Save an investigation
+- Reopen it
+- Export it
+- Compare investigations
+- Import a claim into a simulation
+
+---
+
+# PART 6 — CRISIS SIMULATION LAB
+# MULTI-AGENT SOCIAL INFORMATION SIMULATION
+
+Create a sophisticated, interactive simulation environment.
+
+This must be a real computational simulation.
+
+Do not make an AI generate imaginary simulation statistics.
+
+## 6.1 Scenario Creation Wizard
+
+Create a multi-step wizard.
+
+### Step 1: Crisis Type
+
+Selectable scenarios:
+
+- Flood
+- Earthquake
+- Epidemic
+- Wildfire
+- Severe weather
+- Cybersecurity incident
+- Public safety emergency
+- Generic misinformation event
+
+### Step 2: Crisis Description
+
+Allow users to write a custom scenario.
+
+Example:
+
+"Heavy rainfall has caused flooding in a region. A false message claims that an important bridge has collapsed."
+
+### Step 3: Community Configuration
+
+Allow configuration of:
+
+- Population size
+- Number of community groups
+- Initial trust level
+- Social network density
+- Information exposure
+- Initial misinformation prevalence
+- Media influence
+- Official information availability
+
+### Step 4: Agent Population
+
+Create different agent profiles.
+
+Agent types:
+
+1. Highly trusting information sharers
+2. Skeptical citizens
+3. Community leaders
+4. Local journalists
+5. Health professionals
+6. Emergency responders
+7. Influencers
+8. Fact-checkers
+9. Officials
+10. Ordinary citizens
+
+Each agent should have:
+
+- Unique ID
+- Personality
+- Trust level
+- Skepticism
+- Sharing tendency
+- Information literacy
+- Network connections
+- Group membership
+- Knowledge state
+- Emotional response
+- Source preferences
+
+Generate populations reproducibly using a random seed.
+
+The simulation should not stereotype actual demographic groups or portray protected groups as inherently gullible.
+
+---
+
+## 6.2 Agent Behavior Engine
+
+Build a computational agent system.
+
+Each agent receives information from connected agents or official channels.
+
+Agents may:
+
+- Share a message
+- Ignore a message
+- Question a message
+- Verify a message
+- Correct a message
+- Report a message
+- Trust a message
+- Reject a message
+
+Agent behavior must depend on configurable factors.
+
+Examples:
+
+- Trust in sender
+- Message emotional intensity
+- Source credibility
+- Agent skepticism
+- Information literacy
+- Exposure history
+- Group norms
+- Previous corrections
+
+Use a documented mathematical or probabilistic behavior model.
+
+Do not let an LLM arbitrarily decide all simulation outcomes.
+
+---
+
+## 6.3 LLM-Powered Agent Intelligence
+
+Integrate Gemini as an optional intelligent agent reasoning component.
+
+The LLM can generate:
+
+- Agent dialogue
+- Short reactions
+- Reasoning explanations
+- Human-readable scenario narratives
+- Research interpretation
+- Qualitative observations
+
+However:
+
+The actual state transitions, sharing decisions, network propagation, and metrics must be calculated by simulation code.
+
+Use structured outputs and strict schemas.
+
+Use batching or caching to control API costs.
+
+Provide a deterministic simulation mode that works without the LLM.
+
+---
+
+## 6.4 Social Network Visualization
+
+Display a live interactive social network.
+
+Nodes represent agents.
+
+Edges represent communication relationships.
+
+Node colors indicate:
+
+- Unexposed
+- Exposed
+- Sharing misinformation
+- Correcting misinformation
+- Verified information
+
+Provide:
+
+- Zoom
+- Pan
+- Node selection
+- Agent details
+- Network filtering
+- Community group highlighting
+- Simulation timeline
+
+Animate message propagation.
+
+Make the visualization responsive and performant.
+
+---
+
+## 6.5 Simulation Timeline
+
+Create a real-time simulation timeline.
+
+Display:
+
+- Time step
+- Message propagation
+- Agent exposure
+- Sharing events
+- Corrections
+- Intervention activation
+- Trust changes
+- Community reactions
+
+Allow users to:
+
+- Play
+- Pause
+- Resume
+- Reset
+- Speed up
+- Slow down
+- Step forward
+- Inspect individual events
+
+Each event must come from the simulation engine.
+
+---
+
+# PART 7 — CRISIS SCENARIO LIBRARY
+
+Create a collection of realistic educational scenarios.
+
+## Scenario A: Flood Emergency
+
+A false message claims that a bridge has collapsed.
+
+Study:
+
+- Community panic
+- Information spread
+- Official response
+- Trusted community messengers
+- Verification delays
+
+## Scenario B: Earthquake Rumor
+
+A message claims that another major earthquake is expected at a precise time.
+
+Study:
+
+- Fear-driven sharing
+- Rumor amplification
+- Scientific clarification
+- Trusted expert communication
+
+Clearly explain that earthquake prediction claims require scientific scrutiny.
+
+## Scenario C: Public Health Misinformation
+
+A false health-related message spreads during an epidemic.
+
+Study:
+
+- Trust in health authorities
+- Community information literacy
+- Corrective messaging
+- Trusted health professionals
+
+## Scenario D: Relief Fraud
+
+A fake emergency donation message circulates.
+
+Study:
+
+- Fraud risk
+- Verification of official donation channels
+- Community reporting
+- Warning effectiveness
+
+## Scenario E: Fake Emergency Evacuation
+
+A fabricated evacuation alert spreads.
+
+Study:
+
+- Information confusion
+- Official announcement timing
+- Emergency communication strategies
+- Potential public safety consequences
+
+## Scenario F: Custom Scenario
+
+Users can create their own scenarios.
+
+---
+
+# PART 8 — STRATEGY LAB
+# AI-ASSISTED INTERVENTION OPTIMIZATION
+
+Build an advanced experimental laboratory.
+
+Users should test different misinformation prevention strategies.
+
+## Intervention Types
+
+1. Official emergency announcement
+2. Fact-check notification
+3. Trusted community messenger
+4. Information literacy message
+5. Warning before sharing
+6. Source credibility label
+7. Community correction campaign
+8. Expert communication
+9. Delay before resharing
+10. Multiple-source verification prompt
+
+Each intervention must have a configurable effect model.
+
+Document every model assumption.
+
+Do not assume an intervention is effective without testing it.
+
+## Strategy Comparison
+
+Users should compare:
+
+- Baseline
+- Intervention A
+- Intervention B
+- Intervention A + B
+- Intervention C
+
+Display:
+
+- Misinformation exposure
+- Total sharing events
+- Corrective information reach
+- Time to correction
+- Trust preservation
+- Number of uncorrected exposed agents
+- Intervention cost or complexity
+
+## Scientific Experiment Design
+
+Implement:
+
+- Multiple random seeds
+- Repeated trials
+- Confidence intervals where appropriate
+- Mean and standard deviation
+- Median
+- Distribution visualizations
+- Statistical comparisons
+- Sensitivity analysis
+
+Use reproducible experiment settings.
+
+Never report an experiment as scientifically conclusive when sample size or assumptions are inadequate.
+
+---
+
+# PART 9 — ADVANCED FEATURE
+# ADAPTIVE CRISIS RESPONSE INTELLIGENCE
+
+Implement an AI-assisted strategy recommendation system.
+
+The system should analyze previous simulation results and recommend which intervention to test next.
+
+Example:
+
+"The baseline simulation shows rapid misinformation propagation and low correction reach. Test a trusted-messenger intervention before increasing warning intensity."
+
+The recommendation should explain:
+
+- Observed problem
+- Evidence from simulation
+- Proposed intervention
+- Expected mechanism
+- Risks
+- Limitations
+- What should be measured
+
+The recommendation system must not pretend to know real-world effects without evidence.
+
+## Adaptive Optimization
+
+Implement a real optimization component.
+
+Use:
+
+- Grid search
+- Parameter sweeps
+- Random search
+- Or an appropriate optimization algorithm
+
+Let users optimize intervention parameters.
+
+The objective may be:
+
+- Minimize misinformation exposure
+- Maximize correction reach
+- Minimize correction delay
+- Preserve community trust
+
+Support multi-objective optimization where possible.
+
+Display a Pareto frontier when appropriate.
+
+The AI should interpret optimization results, not invent them.
+
+---
+
+# PART 10 — AI RESEARCH ANALYST
+
+Create a Gemini-powered research analyst.
+
+The analyst should have access to:
+
+- Investigation results
+- Evidence records
+- Simulation results
+- Intervention experiments
+- Evaluation data
+- Project documentation
+
+Users can ask questions such as:
+
+- Why did misinformation spread so quickly?
+- Which intervention performed best?
+- What assumptions affect these results?
+- How did trust change?
+- What is the difference between exposure and sharing?
+- What limitations does this experiment have?
+- Which additional experiment should be performed?
+
+The analyst must answer using actual application data.
+
+When a question cannot be answered from available data, it must say so.
+
+Implement retrieval-augmented generation if useful.
+
+Use grounded answers with links to relevant investigations, experiment IDs, and evidence.
+
+---
+
+# PART 11 — EVALUATION CENTER
+# THE MOST IMPORTANT SCIENTIFIC COMPONENT
+
+Build a dedicated evaluation center.
+
+This section should demonstrate that CrisisMind AI has been tested rather than merely programmed.
+
+## 11.1 LinkCheck Evaluation
+
+Create a labeled dataset of claims.
+
+Include:
+
+- True claims
+- False claims
+- Misleading claims
+- Partially true claims
+- Unverified claims
+- Context-dependent claims
+
+Use reliable sources to label examples.
+
+Do not fabricate dataset labels.
+
+Use a clearly documented dataset source and licensing.
+
+## Metrics
+
+Calculate:
+
+- Accuracy
+- Precision
+- Recall
+- F1 score
+- Confusion matrix
+- Verdict distribution
+- Evidence citation coverage
+- Unsupported verdict rate
+- Abstention rate
+
+Where possible, evaluate against human-reviewed labels.
+
+Clearly disclose dataset limitations.
+
+Do not claim the model is perfect.
+
+## 11.2 Simulation Evaluation
+
+Evaluate the simulation engine.
+
+Test:
+
+- Reproducibility
+- Expected behavior
+- Network propagation
+- Intervention effects
+- Parameter sensitivity
+- Runtime performance
+- Correctness of calculations
+
+Create automated tests.
+
+## 11.3 Model Comparison
+
+Allow comparison between:
+
+- Baseline rules-based analysis
+- Gemini-assisted analysis
+- Different prompting approaches
+- Different intervention configurations
+
+Use actual experimental results.
+
+## 11.4 Evaluation Report
+
+Generate a complete evaluation report containing:
+
+- Research question
+- Methodology
+- Dataset description
+- Metrics
+- Results
+- Limitations
+- Ethical considerations
+- Conclusions
+
+---
+
+# PART 12 — EVIDENCE LIBRARY
+
+Create a searchable evidence database.
+
+Each record should include:
+
+- Claim ID
+- Claim text
+- Evidence source
+- Source URL
+- Source date
+- Retrieval date
+- Evidence excerpt
+- Verdict
+- Investigation ID
+- Related claims
+
+Features:
+
+- Search
+- Filter
+- Sort
+- Open source
+- Compare claims
+- View evidence relationships
+- Export records
+
+Create an evidence graph.
+
+Support links between related claims and sources.
+
+---
+
+# PART 13 — REPORT GENERATION
+
+Generate professional research reports.
+
+Report types:
+
+1. Fact-check investigation
+2. Crisis simulation
+3. Intervention comparison
+4. Evaluation report
+5. Comprehensive research report
+
+Reports should contain:
+
+- Project name
+- Date
+- Research question
+- Scenario
+- Methodology
+- Results
+- Charts
+- Evidence
+- AI analysis
+- Limitations
+- Conclusion
+
+Support:
+
+- PDF
+- CSV
+- JSON
+
+Reports must use actual stored data.
+
+Create a beautiful PDF design.
+
+---
+
+# PART 14 — WAICY PRESENTATION MODE
+
+Create a special mode named:
+
+**WAICY Showcase**
+
+This mode should present the project as a complete competition demonstration.
+
+Include:
+
+## Opening Screen
+
+CrisisMind AI logo.
+
+Tagline:
+
+"Understand the Crisis. Stop the Misinformation. Protect the Community."
+
+Display the problem:
+
+"During emergencies, misinformation can spread faster than verified information. CrisisMind AI investigates claims, studies information propagation, and tests evidence-based communication strategies."
+
+## Guided Demonstration
+
+Create a guided sequence:
+
+1. Open LinkCheck AI.
+2. Investigate a suspicious flood-related message.
+3. Extract the claim.
+4. Show evidence retrieval.
+5. Present the verdict and sources.
+6. Import the claim into Crisis Simulation.
+7. Run a baseline simulation.
+8. Visualize misinformation propagation.
+9. Activate a correction intervention.
+10. Run the simulation again.
+11. Compare results.
+12. Ask the AI Research Analyst to explain the findings.
+13. Generate a final research report.
+
+Make this demonstration work using seeded sample data.
+
+The sample data must be clearly labeled as demo data.
+
+Do not present demo results as real-world evidence.
+
+---
+
+# PART 15 — RESPONSIBLE AI AND ETHICS
+
+Implement a visible Responsible AI section.
+
+Include:
+
+- AI limitations
+- Evidence transparency
+- Human review
+- Privacy protection
+- Data minimization
+- Bias considerations
+- Uncertainty communication
+- Source attribution
+- User safety
+
+## Safety Requirements
+
+Never:
+
+- Automatically label a real person as a criminal.
+- Identify someone as malicious based solely on a rumor.
+- Present unsupported accusations as facts.
+- Encourage panic during emergencies.
+- Provide fabricated emergency instructions.
+- Claim to replace emergency services.
+- Claim that AI fact-checking is infallible.
+- Suppress content merely because it is controversial.
+- Treat disagreement as misinformation.
+
+For emergency scenarios, direct users toward official local emergency authorities.
+
+For real-world claims, emphasize verification and appropriate human judgment.
+
+---
+
+# PART 16 — SECURITY AND PRIVACY
+
+Implement:
+
+- Secure API key handling
+- Input validation
+- Rate limiting
+- Server-side API calls
+- Error handling
+- Secure file upload handling
+- File size restrictions
+- Safe URL fetching
+- SSRF protections
+- Authentication if accounts are supported
+- Database validation
+- Protection against prompt injection
+
+Do not allow arbitrary webpages to override the system's instructions.
+
+Treat webpage text, social media content, uploaded files, and retrieved documents as untrusted data.
+
+Prevent malicious URL fetching from internal network addresses.
+
+Never expose secrets in browser bundles, logs, or generated reports.
+
+---
+
+# PART 17 — PROJECT STRUCTURE
+
+Use a professional modular architecture.
+
+Suggested structure:
+
+crisis-mind-ai/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── features/
+│   │   │   ├── dashboard/
+│   │   │   ├── linkcheck/
+│   │   │   ├── simulation/
+│   │   │   ├── strategy-lab/
+│   │   │   ├── evidence/
+│   │   │   ├── analyst/
+│   │   │   ├── evaluation/
+│   │   │   └── reports/
+│   │   ├── hooks/
+│   │   ├── services/
+│   │   ├── types/
+│   │   └── utils/
+│   └── package.json
+│
+├── backend/
+│   ├── src/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   │   ├── gemini/
+│   │   │   ├── linkcheck/
+│   │   │   ├── evidence/
+│   │   │   ├── simulation/
+│   │   │   ├── optimization/
+│   │   │   └── evaluation/
+│   │   ├── models/
+│   │   ├── database/
+│   │   ├── middleware/
+│   │   ├── validators/
+│   │   └── utils/
+│   └── package.json
+│
+├── datasets/
+│   ├── demo/
+│   ├── evaluation/
+│   └── README.md
+│
+├── docs/
+│   ├── architecture.md
+│   ├── methodology.md
+│   ├── evaluation.md
+│   ├── limitations.md
+│   ├── responsible-ai.md
+│   └── presentation.md
+│
+├── tests/
+│
+├── README.md
+├── .env.example
+└── package.json
+
+Adapt the structure as necessary while preserving clean modular architecture.
+
+---
+
+# PART 18 — REQUIRED API ENDPOINTS
+
+Implement real backend endpoints.
+
+Suggested endpoints:
+
+POST /api/linkcheck/analyze
+
+POST /api/linkcheck/extract-claims
+
+POST /api/linkcheck/retrieve-evidence
+
+GET /api/linkcheck/investigations
+
+GET /api/linkcheck/investigations/:id
+
+POST /api/simulation/create
+
+POST /api/simulation/run
+
+POST /api/simulation/pause
+
+POST /api/simulation/resume
+
+POST /api/simulation/reset
+
+GET /api/simulation/:id/results
+
+POST /api/strategy/experiment
+
+POST /api/strategy/optimize
+
+GET /api/evidence
+
+POST /api/analyst/chat
+
+POST /api/reports/generate
+
+POST /api/evaluation/run
+
+Use typed request and response models.
+
+---
+
+# PART 19 — USER EXPERIENCE REQUIREMENTS
+
+The application must be easy to use despite its advanced functionality.
+
+Include:
+
+- Helpful onboarding
+- Tooltips
+- Empty states
+- Loading indicators
+- Progress indicators
+- Error messages
+- Retry functionality
+- Success notifications
+- Responsive layouts
+- Accessible controls
+- Keyboard navigation
+- Clear terminology
+
+Do not use technical jargon everywhere.
+
+Explain difficult concepts in simple language.
+
+Every major feature should have a brief "How it works" explanation.
+
+---
+
+# PART 20 — DEMO DATA
+
+Create a comprehensive fictional demonstration dataset.
+
+Include:
+
+- Flood scenario
+- 100–500 virtual agents
+- Multiple community groups
+- Several misinformation messages
+- Official correction messages
+- Evidence records
+- Several intervention experiments
+- Historical investigation examples
+
+The demo must be reproducible.
+
+Clearly mark all fictional scenarios.
+
+Do not use fabricated real-world claims presented as verified facts.
+
+---
+
+# PART 21 — PERFORMANCE AND RELIABILITY
+
+The application must:
+
+- Run without unnecessary API calls.
+- Support deterministic simulations.
+- Avoid blocking the interface during long operations.
+- Handle API failures.
+- Handle missing evidence.
+- Handle inaccessible URLs.
+- Handle malformed input.
+- Avoid duplicate requests.
+- Use caching where appropriate.
+- Use pagination for large datasets.
+- Keep simulation visualization performant.
+
+Provide meaningful fallback behavior.
+
+---
+
+# PART 22 — IMPLEMENTATION ORDER
+
+Do not attempt to implement everything as a superficial prototype.
+
+Build in phases.
+
+## Phase 1 — Foundation
+
+- Project setup
+- Frontend
+- Backend
+- Routing
+- Database
+- API configuration
+- Design system
+
+## Phase 2 — LinkCheck AI
+
+- URL input
+- Text input
+- Screenshot upload
+- Claim extraction
+- Evidence retrieval
+- Verdict generation
+- Citation display
+- Investigation history
+
+## Phase 3 — Simulation Engine
+
+- Agent model
+- Network generation
+- Message propagation
+- State transitions
+- Timeline
+- Metrics
+
+## Phase 4 — Visualization
+
+- Network graph
+- Simulation charts
+- Agent inspection
+- Event timeline
+
+## Phase 5 — Strategy Lab
+
+- Interventions
+- Baseline experiments
+- Comparative runs
+- Parameter optimization
+
+## Phase 6 — Research Analyst
+
+- Gemini integration
+- Data-grounded questions
+- Research insights
+
+## Phase 7 — Evaluation
+
+- Test datasets
+- Evaluation metrics
+- Reproducibility
+- Statistical analysis
+
+## Phase 8 — Reports
+
+- PDF generation
+- CSV export
+- JSON export
+
+## Phase 9 — WAICY Showcase
+
+- Guided demonstration
+- Demo dataset
+- Presentation mode
+
+## Phase 10 — Finalization
+
+- Testing
+- Bug fixing
+- Security review
+- Documentation
+- Deployment
+- Competition preparation
+
+---
+
+# PART 23 — CODING RULES
+
+These instructions are mandatory.
+
+1. Build actual functionality, not fake interfaces.
+2. Never simulate an API response using fabricated AI output.
+3. Never generate fake evidence citations.
+4. Never generate fake research metrics.
+5. Never hardcode random dashboard statistics.
+6. Never claim inaccessible links were inspected.
+7. Never make the LLM responsible for arbitrary numerical simulation calculations.
+8. Keep frontend and backend properly separated.
+9. Keep API keys secure.
+10. Use TypeScript types.
+11. Use modular code.
+12. Use reusable components.
+13. Add error handling.
+14. Add tests.
+15. Keep the code readable.
+16. Explain important architecture decisions.
+17. Use real data flow.
+18. Maintain a functional application at every development stage.
+19. Avoid unnecessary dependencies.
+20. Do not delete working functionality while adding new features.
+
+If a feature is too large to implement in one generation, create a complete implementation plan and implement it in smaller working stages.
+
+---
+
+# PART 24 — FIRST RESPONSE AND DEVELOPMENT WORKFLOW
+
+Before generating code:
+
+1. Briefly explain the architecture.
+2. Identify API requirements.
+3. Identify technical limitations.
+4. Create the project structure.
+5. Define the data models.
+6. Define the backend routes.
+7. Define the simulation methodology.
+8. Define the LinkCheck investigation pipeline.
+
+Then begin implementation.
+
+Generate actual files and code.
+
+If working inside Google AI Studio, use its available development environment and supported tools.
+
+If the environment cannot create or execute files, provide complete file contents and clear setup instructions rather than pretending the project has been built.
+
+Do not stop after presenting a plan.
+
+Continue implementing the project.
+
+When a coding stage is complete:
+
+- Run available tests.
+- Check for errors.
+- Fix errors.
+- Explain what works.
+- Explain what remains.
+- Continue to the next stage.
+
+---
+
+# PART 25 — WAICY COMPETITION PREPARATION
+
+Prepare the project as an original student-led research and engineering work.
+
+Create:
+
+## A. Research Documentation
+
+- Problem statement
+- Research question
+- Project objectives
+- Literature review
+- Existing approaches
+- Novel contribution
+- Methodology
+- System architecture
+- Evaluation methodology
+- Results
+- Limitations
+- Ethical considerations
+- Conclusion
+
+## B. Competition Presentation
+
+Prepare:
+
+- Professional project title
+- One-minute elevator pitch
+- Three-minute project demonstration
+- Five-minute technical presentation
+- Detailed research explanation
+- System architecture diagram
+- Simulation methodology diagram
+- LinkCheck workflow diagram
+- Evaluation charts
+- Results summary
+- Limitations slide
+- Responsible AI slide
+- Future work slide
+
+## C. Judge-Facing Explanation
+
+Clearly explain:
+
+- What problem the project addresses
+- Why the problem matters
+- What existing tools do
+- What CrisisMind AI contributes
+- How LLMs are used
+- What is computed by code
+- How the project was evaluated
+- What the results show
+- What the limitations are
+- What the student learned
+
+Do not invent accomplishments, experiments, accuracy scores, or awards.
+
+---
+
+# PART 26 — ORIGINAL CONTRIBUTION
+
+Develop a clearly documented research contribution.
+
+Do not claim that misinformation detection, multi-agent simulation, or emergency communication research has never existed.
+
+Instead, define the original contribution as the specific implementation and integration developed in this project.
+
+Potential contribution:
+
+**An integrated experimental platform that connects evidence-grounded claim investigation with reproducible multi-agent crisis misinformation simulations, allowing users to investigate claims, simulate community propagation, test corrective interventions, and evaluate outcomes in one workflow.**
+
+Strengthen this contribution through:
+
+- A reproducible simulation engine
+- Evidence-grounded AI investigation
+- A transparent intervention framework
+- Experimental comparisons
+- Sensitivity analysis
+- Explainable results
+- A documented evaluation methodology
+
+If research shows that a similar integrated system exists, acknowledge it and refine the project's contribution.
+
+---
+
+# PART 27 — FINAL ACCEPTANCE CRITERIA
+
+The project is not considered complete until:
+
+- [ ] The application launches successfully.
+- [ ] The frontend is functional.
+- [ ] The backend is functional.
+- [ ] Gemini integration works.
+- [ ] Users can submit claims.
+- [ ] Users can submit accessible URLs.
+- [ ] Users can upload screenshots.
+- [ ] Claims can be extracted.
+- [ ] Evidence can be retrieved from real sources.
+- [ ] Verdicts include evidence and limitations.
+- [ ] Inaccessible links are handled honestly.
+- [ ] Investigations can be saved.
+- [ ] Claims can be imported into simulations.
+- [ ] Simulations run using actual code.
+- [ ] Agents behave according to documented rules.
+- [ ] Networks visualize information propagation.
+- [ ] Simulation metrics are calculated correctly.
+- [ ] Interventions can be tested.
+- [ ] Multiple experiments can be compared.
+- [ ] AI recommendations are grounded in results.
+- [ ] Research reports can be generated.
+- [ ] Evaluation tests work.
+- [ ] The project includes responsible AI safeguards.
+- [ ] Demo data is clearly labeled.
+- [ ] Documentation is complete.
+- [ ] WAICY presentation mode works.
+- [ ] No fake functionality is presented as real.
+
+---
+
+# FINAL INSTRUCTION
+
+Build CrisisMind AI as a genuinely intelligent, scientifically meaningful, and technically advanced AI project.
+
+Prioritize:
+
+1. Real functionality
+2. Strong LLM integration
+3. Evidence-grounded investigation
+4. Original student research
+5. Reproducible simulation
+6. Scientific evaluation
+7. Excellent user experience
+8. Responsible AI
+9. Competition-quality presentation
+
+Make the result exceptional.
+
+Do not simply create a beautiful dashboard.
+
+Create a complete AI research platform that demonstrates how Large Language Models can help people investigate misinformation, understand information propagation, and explore better crisis communication strategies.
+
+Start by building the architecture and the first fully functional version of LinkCheck AI, then implement the Crisis Simulation Lab and the remaining modules incrementally.
+
+**Project: CrisisMind AI**
+
+**WAICY 2026 — AI Large Language Model Track**
+
+**Understand the Crisis. Stop the Misinformation. Protect the Community.**
